@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <title> Анкета Посетителя Ресторана </title>
+    <style>
+        fieldset {
+          background-color: #eeeeee;
+        }
+        
+        legend {
+          background-color: gray;
+          color: white;
+          padding: 5px 10px;
+        }
+        
+        input {
+          margin: 5px;
+        } 
+
+    </style>
+</head>
+<body>
+<h1>Анкета Посетителя Ресторана</h1> 
+<form action="/action_page.php">
+    <fieldset>
+        <legend>Контактная Информация:</legend>
+<label for="name">Имя:</label>
+    <input id="name"name="name" placeholder="">
+</label>
+
+<br><br>
+
+<label for="phone number">Номер:</label>
+<input id="phone number" number="" placeholder=""> </label>
+<br><br>
+
+    <label for="email">Email:</label>
+<input type="email" id="email" name="email">
+</label>
+
+<br><br>
+
+<label for="date of visiting">Дата посещения:</label>
+<input type="date of visiting" id="date of visiting" name="date of visitin">
+<br><br>
+</fieldset>
+</form>
+<br>
+<form action="/action_page.php">
+ <fieldset>
+    <legend>Персональная Информация:</legend>
+<p> Возраст:
+ <input type="number" min ="1" max ="100" step="1">
+    </p>
+
+    <p> Любимая кухня:
+        <select name=”kitchen”>
+            <option value=”fav1” selected>Русская</option>
+            <option value=”fav2”>Итальянская</option>
+            <option value=”fav3”>Французкая</option>
+            <option value=”fav4”>Китайская</option>
+        </select>
+        </p>
+<p>Какие блюда вы хотели бы увидеть в меню <br><textarea name="lorem-ipsum" cols="40" rows="4">...</textarea></p>
+</fieldset>
+</form>
+
+<form action="/action_page.php">
+    <fieldset>
+       <legend>Оценка нашего заведения:</legend>
+       <p> Почему Вы Выбрали Наше Заведение :</p>
+       <input type="radio" id="answer" name="answer text" value="answer"><label>Недалеко от дома/работы</label><br>
+        <input type="radio" id="answer" name="answer text" value="answer"><label>Увидел рекламу</label><br>
+        <input type="radio" id="answer" name="answer text" value="answer"><label>Посоветовали</label><br>
+        <input type="radio" id="answer" name="answer text" value="answer"><label>Оптимальное соотношение цены качества</label><br>
+
+        <p> Вы будете рекомендовать наше заведение своим знакомым:</p>
+       <input type="radio" id="answer" name="answer text" value="answer"><label>Да</label><br>
+        <input type="radio" id="answer" name="answer text" value="answer">Нет<br>
+    </fieldset>
+</form>
+
+<br>
+<button type=”button”>Отправить</button>
+</body>
+</html>

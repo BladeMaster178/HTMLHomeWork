@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <title> Форма для заказа пиццы </title>
+<style type="text/css">
+  body {
+    padding-left: 11em;
+ font-family: Georgia, "Times New Roman",
+          Times, serif;
+    color: black;
+    background-color: lightgrey }
+  </style>
+</head>
+<body>
+<h1>Форма для заказа пиццы:</h1> 
+<p> Выберите пиццу:
+<select name=”pizza”>
+    <option value=”pizza1” selected>Маргарита</option>
+    <option value=”pizza2”>Классическая</option>
+    <option value=”pizza3”>С грибами</option>
+    <option value=”pizza4” >Острая</option>
+</select>
+</p>
+<p> Выберите основу:</p>
+<input type="radio" id="answer" name="answer text" value="answer"><label>Тонкий край</label> <input type="radio" id="answer" name="answer text" value="answer"><label>Толстый край</label><br>
+<br>
+<input type="checkbox" notification.checked> <label>Разрезать пиццу</label><br>
+<label>Номер телефона для связи
+    <input name="number" placeholder="">
+</label>
+
+<br><br>
+
+<label for="adress">Адрес доставки</label>
+<input id="adress" name="adress" placeholder=""> </label>
+<br><br>
+<textarea name="lorem-ipsum" cols="50" rows="8">...</textarea>
+<br><br>
+<button type=”button”>Заказать</button>
+</body>
+</html>

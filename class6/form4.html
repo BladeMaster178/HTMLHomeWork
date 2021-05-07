@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title> Заполните форму </title>
+  <style>
+    fieldset {
+      background-color: #eeeeee;
+    }
+
+    legend {
+      background-color: gray;
+      color: white;
+      padding: 5px 10px;
+    }
+
+    input {
+      margin: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Заполните форму</h1>
+  <form action="/action_page.php">
+    <fieldset>
+      <legend>Контактная Информация:</legend>
+      <label for="name">Ваши имя фамилия:</label>
+      <input id="name" name="name" required placeholder="Иванов Иван Иванович">
+      </label>
+
+      <br><br>
+
+      <label for="login">Введите логин для сайта <br>(на английском):</label>
+      <input id="login" login="login" placeholder="Ivan"> </label>
+      <br><br>
+      <label for="gender">Выберите ваш пол:</label>
+      <input type="radio" id="answer" name="answer text" value="answer"><label>М</label> <input type="radio" id="answer"
+        name="answer text" value="answer"><label>Ж</label>
+      <br>
+      <br>
+      <label> Введите дату рождения:
+        <input type="number" min="1" max="31" step="1" placeholder="дд">
+        <input type="number" min="1" max="12" step="1" placeholder="мм">
+        <input type="number" min="1970" max="2021" step="1" placeholder="гггг">
+        </p>
+      </label>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required placeholder="Ваш почтовый ящик">
+      </label>
+
+      <br><br>
+
+      <label for="web site">Web Site(URL):</label>
+      <input type="web site" id="web site" name="web site" placeholder="http//www.mysite.com">
+      <br>
+      <br>
+
+      <label for="credit card">Кредитная карта:</label>
+      <input type="credit card" id="credit card" name="credit card" placeholder="3243-2423-4322-3443">
+      </label>
+
+      <br><br>
+
+      <label for="phone number">Телефон:</label>
+      <input type="phone number" id="phone number" name="phone number" placeholder="(380)234-234-423">
+      <br>
+      <p>Сообщение:<br><textarea name="lorem-ipsum" cols="40" rows="4">...</textarea></p>
+    </fieldset>
+    <input type="submit">
+  </form>
+</body>
+
+</html>
