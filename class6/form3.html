@@ -1,43 +1,44 @@
 <!DOCTYPE html>
 <html>
-    <head>
-    <meta charset="UTF-8">
-    <title> Форма отзыва на товар </title>
-    <style>
-        fieldset {
-          background-color: #eeeeee;
-        }
-        
-        legend {
-          background-color: gray;
-          color: white;
-          padding: 5px 10px;
-        }
-        
-        input {
-          margin: 5px;
-        } 
 
-    </style>
+<head>
+  <meta charset="UTF-8">
+  <title> Форма отзыва на товар </title>
+  <style>
+    fieldset {
+      background-color: #eeeeee;
+    }
+
+    legend {
+      background-color: gray;
+      color: white;
+      padding: 5px 10px;
+    }
+
+    input {
+      margin: 5px;
+    }
+  </style>
 </head>
+
 <body>
-<h1>Заполните форму ниже</h1> 
-<form action="/action_page.php">
+  <h1>Заполните форму ниже</h1>
+  <form action="/action_page.php">
     <fieldset>
-        <legend>Форма отзыва на товар:</legend>
-<label for="name">Имя:</label>
-    <input id="name"name="name" placeholder="">
-</label>
-<br>
-<br>
-<label for="email">Email:</label>
-<input type="email" id="email" name="email">
+      <legend>Форма отзыва на товар:</legend>
+      <label for="name">Имя:</label>
+      <input id="name" name="name" placeholder="">
+      </label>
+      <br>
+      <br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email">
 
-<br><br>
+      <br><br>
 
-<label for="date of visiting">Оценка:</label>
+      <label for="date of visiting">Оценка:</label>
 
-<br><br>
+      <br><br>
 
       <input type="radio" id="answer" name="answer text" value="answer"><label>★☆☆☆☆</label><br>
       <input type="radio" id="answer" name="answer text" value="answer"><label>★★☆☆☆</label><br>
@@ -45,9 +46,10 @@
       <input type="radio" id="answer" name="answer text" value="answer"><label>★★★★☆</label><br>
       <input type="radio" id="answer" name="answer text" value="answer"><label>★★★★★</label><br>
       <br><br>
-<p>Ваш отзыв <br><textarea name="lorem-ipsum" cols="40" rows="4">...</textarea></p>
-<br>
-<br>
-<button type=”button”>Отправить</button>
+      <p>Ваш отзыв <br><textarea name="lorem-ipsum" cols="40" rows="4">...</textarea></p>
+      <br>
+      <br>
+      <button type="button">Отправить</button>
 </body>
+
 </html>
