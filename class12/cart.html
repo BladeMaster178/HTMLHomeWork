@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title> Интернет-магазин </title>
+    <style>
+        fieldset {
+            background-color: #eeeeee;
+        }
+
+        legend {
+            background-color: gray;
+            color: white;
+            padding: 5px 10px;
+        }
+
+        input {
+            margin: 5px;
+        }
+
+
+        ul {
+            width: 180px;
+            /* Ширина меню */
+            list-style: none;
+            /* Для списка убираем маркеры */
+            margin: 0;
+            /* Нет отступов вокруг */
+            padding: 0;
+            /* Убираем поля вокруг текста */
+            font-family: Arial, sans-serif;
+            /* Рубленый шрифт для текста меню */
+            font-size: 10pt;
+            /* Размер названий в пункте меню */
+        }
+
+        li ul {
+            position: absolute;
+            /* Подменю позиционируются абсолютно */
+            display: none;
+            /* Скрываем подменю */
+            margin-left: 165px;
+            /* Сдвигаем подменю вправо */
+            margin-top: -2em;
+            /* Сдвигаем подменю вверх */
+        }
+
+        li a {
+            display: block;
+            /* Ссылка как блочный элемент */
+            padding: 5px;
+            /* Поля вокруг надписи */
+            text-decoration: none;
+            /* Подчеркивание у ссылок убираем */
+            color: #666;
+            /* Цвет текста */
+            border: 1px solid #ccc;
+            /* Рамка вокруг пунктов меню */
+            background-color: #f0f0f0;
+            /* Цвет фона */
+            border-bottom: none;
+            /* Границу снизу не проводим */
+        }
+
+        li a:hover {
+            color: #ffe;
+            /* Цвет текста активного пункта */
+            background-color: #888;
+            /* Цвет фона активного пункта */
+        }
+
+        li:hover ul {
+            display: block;
+            /* При выделении пункта курсором мыши отображается подменю */
+        }
+
+        .brd {
+            border-bottom: 1px solid #ccc;
+            /* Линия снизу */
+        }
+
+/*скрываем наше меню и checkbox*/
+.menu1, #go {
+    display:none;
+}
+
+.menu2, #go1 {
+    display:none;
+}
+/*стилизуем кнопочку*/
+.st {
+    padding:0 0px 0 0px;
+    background-color: #eeeeee;
+    cursor:pointer;
+    color:black;
+}
+
+.st1 {
+    padding:0 0px 0 0px;
+    background-color: #eeeeee;
+    cursor:pointer;
+    color:black;
+}
+/*а вот собственно и само действие*/
+#go:checked ~ .menu1 {
+    display:block;
+}
+
+#go1:checked ~ .menu2 {
+    display:block;
+}
+    </style>
+</head>
+
+<body>
+    <h1>Интернет-магазин</h1>
+    <img src="1.jpg" />
+    <ul class="menu">
+        <li><a href="technic.html">Бытовая техника</a>
+            <ul>
+                <li><a href="link1.html">Стиральные машины</a></li>
+                <li><a href="link2.html">Пылесосы</a></li>
+                <li><a href="link3.html">Швейные, вышивальные машины</a></li>
+                <li><a href="link4.html">Утюги</a></li>
+                <li><a href="link5.html">Электровеники</a></li>
+                <li><a href="link6.html" class="brd">Сушилки для обуви</a></li>
+            </ul>
+        </li>
+        <li><a href="kitchen.html">Техника для кухни</a>
+            <ul>
+                <li><a href="link1.html">Холодильники </a></li>
+                <li><a href="link2.html">Кухонные плиты</a></li>
+                <li><a href="link3.html">Морозильники</a></li>
+                <li><a href="link4.html">Настольные плиты</a></li>
+                <li><a href="link5.html">Ростеры, мини-печи</a></li>
+                <li><a href="link6.html">Вытяжки</a></li>
+                <li><a href="link7.html" class="brd">Микроволновые печи</a></li>
+            </ul>
+        </li>
+        <li><a href="computer.html">Компьютерная техника</a>
+            <ul>
+                <li><a href="link1.html">Ноутбуки </a></li>
+                <li><a href="link2.html">Планшеты</a></li>
+                <li><a href="link3.html">Компьютеры, моноблоки</a></li>
+                <li><a href="link4.html">Игровые приставки</a></li>
+                <li><a href="link5.html" class="brd">Серверное оборудование</a></li>
+            </ul>
+        </li>
+        <li><a href="trashcan.html" class="brd">Корзина</a></li>
+    </ul>
+
+    <br>
+    <form action="/action_page.php">
+        <fieldset>
+            <legend>Заполните Форму для заказа:</legend>
+            <label for="name">Имя:</label>
+            <input id="name" name="name" required placeholder="">
+            </label>
+
+            <br><br>
+
+            <label for="phone number">Номер:</label>
+            <input id="phone number" number="" required placeholder=""> </label>
+            <br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required name="email">
+            </label>
+
+            <br>
+            <p> Выберите способ доставки:</p>
+            <input id="go" type="checkbox" />
+            <label >Самовывоз со склада по адресу:</label>
+            <label for="go" class="st">ул.Иванова дом 5 корпус 2</label>
+            <ul class="menu1">
+                <p>карта адреса<img src="2.png" ></p>
+            </ul>
+            <br>
+            <br>
+            <input id="go1" type="checkbox" />
+            <label for="go1" class="st1">Курьером по Минску</label>
+            <ul class="menu2"> 
+                <p>Адрес доставки <input type="adress" id="adress" name="adress"></p> 
+            </ul>
+            <p>Коментарий к заказу <br><textarea name="lorem-ipsum" cols="40" rows="4">...</textarea></p>
+            <label>Я прочитал и согласен с [условиями доставки](#):</label><input type="checkbox" required
+                notification.checked><br>
+        </fieldset>
+        <input type="submit">
+    </form>
+    <br>
+    <form action="/action_page.php">
+        <fieldset>
+            <legend>Контактная Информация:</legend>
+            <li> номер телефона: 80297564333 </li>
+            <li> наш email: internetshop@gmail.com </li>
+            <li> наш Skype: internet.shop </li>
+            <li> время работы сервиса: 10:00 до 20:00 (перерыв с 13:00 - 14:00) </li>
+        </fieldset>
+    </form>
+</body>
+
+</html>

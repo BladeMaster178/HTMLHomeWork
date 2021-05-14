@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Индикатор загрузки</title>
+    <style>
+        .progressbar {
+            border: 1px solid #66f;
+            width: 300px;
+            height: 20px;
+        }
+
+        .progressbar__progress {
+            background-color: #99f;
+            width: 72%;
+            height: 100%;
+        }
+
+        .progressbar__value {
+            position: absolute;
+            top: 120px;
+            left: 150px;
+        }
+
+        .modalwindow {
+            position: absolute;
+            border: 10px solid rgb(129, 129, 129);
+            width: 100%;
+            max-width: 300px;
+            margin: 5% auto;
+            padding: 2%;
+            background: rgb(240, 237, 237);
+            border-radius: 3px;
+        }
+
+
+
+        .line {
+            border-bottom-style: solid;
+            border-width: 1px;
+        }
+
+        .button {
+            margin-left: 7cm;
+        }
+
+        .switch {
+            display: inline-block;
+        }
+
+        .switch [type="checkbox"] {
+            display: none;
+        }
+
+        .switch span {
+            border: 2px solid rgb(129, 129, 129);
+            display: block;
+            color: #fff;
+            background: rgb(180, 181, 182);
+            padding: 2%;
+            margin-left: 6cm;
+            width: 20%;
+            border-radius: 3px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .switch :checked~span {
+            color: #fff;
+            background-color: rgb(126, 126, 126);
+        }
+    </style>
+</head>
+
+<body>
+    <h1> 1. Индикатор загрузки при помощи: display, position<br>
+        2. Модальное окно</h1>
+
+    <div class="progressbar">
+        <div class="progressbar__progress"></div>
+        <span class="progressbar__value">72%</span>
+    </div>
+    <br>
+    <br>
+
+    <div class="modalwindow">
+        <button class="button" type="button">x</button>
+        <h3 class="line">Model Header </h3>
+        <p class="line">Some text in model.</p>
+        <label class="switch">
+            <input type="checkbox" name="check1">
+            <span>Close</span>
+        </label>
+    </div>
+    </div>
+</body>
+
+</html>
