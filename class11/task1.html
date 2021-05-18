@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Индикатор загрузки</title>
+    <style>
+        .progressbar {
+            border: 1px solid #66f;
+            width: 300px;
+            height: 20px;
+        }
+
+        .progressbar__progress {
+            background-color: #99f;
+            width: 72%;
+            height: 100%;
+        }
+
+        .progressbar__value {
+            position: absolute;
+            top: 83px;
+            left: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Индикатор загрузки при помощи: display, position</h1>
+
+    <div class="progressbar">
+        <div class="progressbar__progress"></div>
+        <span class="progressbar__value">72%</span>
+    </div>
+</body>
+
+</html>

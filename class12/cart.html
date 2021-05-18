@@ -80,36 +80,40 @@
             /* Линия снизу */
         }
 
-/*скрываем наше меню и checkbox*/
-.menu1, #go {
-    display:none;
-}
+        /*скрываем наше меню и checkbox*/
+        .menu1,
+        #go {
+            display: none;
+        }
 
-.menu2, #go1 {
-    display:none;
-}
-/*стилизуем кнопочку*/
-.st {
-    padding:0 0px 0 0px;
-    background-color: #eeeeee;
-    cursor:pointer;
-    color:black;
-}
+        .menu2,
+        #go1 {
+            display: none;
+        }
 
-.st1 {
-    padding:0 0px 0 0px;
-    background-color: #eeeeee;
-    cursor:pointer;
-    color:black;
-}
-/*а вот собственно и само действие*/
-#go:checked ~ .menu1 {
-    display:block;
-}
+        /*стилизуем кнопочку*/
+        .st {
+            padding: 0 0px 0 0px;
+            background-color: #eeeeee;
+            cursor: pointer;
+            color: black;
+        }
 
-#go1:checked ~ .menu2 {
-    display:block;
-}
+        .st1 {
+            padding: 0 0px 0 0px;
+            background-color: #eeeeee;
+            cursor: pointer;
+            color: black;
+        }
+
+        /*а вот собственно и само действие*/
+        #go:checked~.menu1 {
+            display: block;
+        }
+
+        #go1:checked~.menu2 {
+            display: block;
+        }
     </style>
 </head>
 
@@ -171,17 +175,17 @@
             <br>
             <p> Выберите способ доставки:</p>
             <input id="go" type="checkbox" />
-            <label >Самовывоз со склада по адресу:</label>
+            <label>Самовывоз со склада по адресу:</label>
             <label for="go" class="st">ул.Иванова дом 5 корпус 2</label>
             <ul class="menu1">
-                <p>карта адреса<img src="2.png" ></p>
+                <p>карта адреса<img src="2.png"></p>
             </ul>
             <br>
             <br>
             <input id="go1" type="checkbox" />
             <label for="go1" class="st1">Курьером по Минску</label>
-            <ul class="menu2"> 
-                <p>Адрес доставки <input type="adress" id="adress" name="adress"></p> 
+            <ul class="menu2">
+                <p>Адрес доставки <input type="adress" id="adress" name="adress"></p>
             </ul>
             <p>Коментарий к заказу <br><textarea name="lorem-ipsum" cols="40" rows="4">...</textarea></p>
             <label>Я прочитал и согласен с [условиями доставки](#):</label><input type="checkbox" required
