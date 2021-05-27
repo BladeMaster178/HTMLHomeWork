@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>header</title>
+    <style>
+       .container{
+
+display: flex;
+
+flex-direction: row;
+
+justify-content: flex-start;
+
+border: 5px solid black;
+
+padding: 20px;
+}
+
+ul {
+            width: 180px;
+            /* Ширина меню */
+            list-style: none;
+            /* Для списка убираем маркеры */
+            margin: 0;
+            /* Нет отступов вокруг */
+            padding: 0;
+            /* Убираем поля вокруг текста */
+            font-family: Arial, sans-serif;
+            /* Рубленый шрифт для текста меню */
+            font-size: 10pt;
+            /* Размер названий в пункте меню */
+        }
+
+        li ul {
+            position: absolute;
+            /* Подменю позиционируются абсолютно */
+            display: none;
+            /* Скрываем подменю */
+            margin-left: 165px;
+            /* Сдвигаем подменю вправо */
+            margin-top: -2em;
+            /* Сдвигаем подменю вверх */
+        }
+
+        li a {
+            display: block;
+            /* Ссылка как блочный элемент */
+            padding: 5px;
+            /* Поля вокруг надписи */
+            text-decoration: none;
+            /* Подчеркивание у ссылок убираем */
+            color: #666;
+            /* Цвет текста */
+            border: 1px solid #ccc;
+            /* Рамка вокруг пунктов меню */
+            background-color: #f0f0f0;
+            /* Цвет фона */
+            border-bottom: none;
+            /* Границу снизу не проводим */
+        }
+
+        li a:hover {
+            color: #ffe;
+            /* Цвет текста активного пункта */
+            background-color: #888;
+            /* Цвет фона активного пункта */
+        }
+
+        li:hover ul {
+            display: block;
+            /* При выделении пункта курсором мыши отображается подменю */
+        }
+
+        .brd {
+            border-bottom: 1px solid #ccc;
+            /* Линия снизу */
+        }
+
+#con1{
+width: 30%;
+border: 2px solid black;
+background-color: white;
+height: 220px;
+}
+#con2{
+width: 200px;
+border: 2px solid black;
+border-left: 0px;
+background-color: white;
+height: 80px;
+}
+
+#con3{
+width: 200px;
+border: 2px solid black;
+border-left: 0px;
+background-color: white;
+height: 80px;
+}
+#con4{
+width: 200px;
+border: 2px solid black;
+border-left: 0px;
+background-color: white;
+height: 80px;
+}
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="con1">
+            <img alt="Единый Сервисный центр — Яндекс.Карты" class="n3VNCb" src="https://avatars.mds.yandex.net/get-altay/2815220/2a00000172254ee357afeeef6c9d023ec330/L" data-noaft="1" jsname="HiaYvf" jsaction="load:XAeZkd;" style="width: 383px; height: 215.246px; margin: 0px;">
+        </div>
+        <div id="con2">
+            <label for="name">поле для поиска:</label>
+            <input id="name" name="name" placeholder="">
+            </label>
+        </div>
+        <div id="con3">
+            <ul class="menu">
+                <li><a href="technic.html">меню</a>
+                    <ul>
+                        <li><a href="link1.html">каталог</a></li>
+                        <li><a href="link2.html">новости</a></li>
+                        <li><a href="link3.html">о нас</a></li>
+                    </ul>
+                </li>
+        </div>
+        <div id="con4">
+            <label for="phone number">контактный номер телефона:</label>
+            <input id="phone number" number="" placeholder=""> </label>
+        </div>
+    </div>
+</body>
+
+</html>
