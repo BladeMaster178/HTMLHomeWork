@@ -6,79 +6,223 @@
     <meta charset="utf-8">
     <title>flexbox</title>
     <style>
-       .container{
+      .vector{
 
+left: 27.5%;
+right: 27.5%;
+top: 27.5%;
+bottom: 27.5%;
+
+border: 3.5px solid black;
+}
+
+.vector1{
+
+position: absolute;
+left: 27.5%;
+right: 27.5%;
+top: 27.5%;
+bottom: 27.5%;
+
+border: 3.5px solid black;
+}
+#mainmenu {
+    background: grey;
+    position: relative;
+    overflow: hidden;
+    height: 10vh;
+    margin: 0px 0
+}
+#mainmenu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    left: 50%;
+    font: 14px Arial, Helvetica, sans-serif;
+    height: 40px
+}
+#mainmenu ul li {
+    position: relative;
+    left: -140%;
+    float: left;
+    margin: 0 0px;
+    height: 40px
+}
+#mainmenu ul li a {
+    color:black;
+    display: block;
+    text-decoration: none;
+    padding: 0 15px;
+    line-height: 60px;
+}
+#mainmenu ul li a:hover {
+    background-color:lightgrey;
+}
+#button{
+    border-radius: 30%;
+    width: 10%;
+    margin-left: 10%;
+    cursor: pointer;
+    font-size: 30px;
+line-height: 30px;
+}
+#span{
+    color: black;
+    font-size: 64px;
+line-height: 64px;
+margin-left: 20%;
+}
+.container{
+  flex-wrap:wrap;
+  display: flex;
+  flex-direction:column ;
+  
+}
+*{
+  margin: 0;
+   padding: 0;
+}
+.c1{
+  display:flex;
+  background: url(https://html5book.ru/wp-content/uploads/2015/05/background1.png);
+  height: 10vh;
+  width: 100%;
+  justify-content: flex-start;
+line-height: 40px;
+}          
+.c2{
+  display:flex;
+  background: url(https://html5book.ru/wp-content/uploads/2015/05/background1.png);
+  height:80vh;
+  width: 100%;
+  justify-content: flex-end;
+
+}
+
+
+.c3{
+  display:flex;
+  height:20vh;
+  width: 100%;
+  justify-content: center;
+
+}
+  .c4
+  {
+ display:flex;
+ background: url(https://html5book.ru/wp-content/uploads/2015/05/background1.png);
+  height:80vh;
+  width: 100%;
+  justify-content: space-between;
+  }
+
+  .c5
+  {
+ display:flex;
+ background: url(https://html5book.ru/wp-content/uploads/2015/05/background1.png);
+  height:60vh;
+  width: 100%;
+  justify-content: space-between;
+  }
+ 
+  #text{
+position: absolute;
+height: 80px;
+top: 296px;
+
+font-family: Inter;
+font-style: normal;
+font-weight: 900;
+font-size: 64px;
+line-height: 77px;
 display: flex;
+align-items: flex-end;
+text-align: center;
+letter-spacing: -1px;
 
-flex-direction: row;
-
-flex-wrap: wrap;
-
-align-items: flex-start;
-
-justify-content: center;
-
-border: 5px solid black;
-
-background-color: white;
-
-padding: 20px;
+/* Black */
+color: #2D3436;
 }
-
-
-
-#con1{
-width: 20%;
-border: 2px solid black;
-background-color: white;
-height: 420px;
-}
-#con2{
-    width: 25%;
-border: 2px solid black;
-background-color: white;
-height: 420px;
-}
-
-
-
-#con3{
-    width: 20%;
-border: 2px solid black;
-background-color: white;
-height: 420px
-}
-#con4{
-    width: 25%;
-border: 2px solid black;
-background-color: white;
-height: 420px;
-}
-
 
     </style>
 </head>
 
-<body>
+<body> 
+  <div class="vector1">
+
+  </div>
     <div class="container">
-        <div id="con1">
-            <span>Купить Холодильник Haier HB18FGSAAA в Минске с доставкой из  интернет-магазина</span>
-            <img alt="Купить Холодильник Haier HB18FGSAAA в Минске с доставкой из  интернет-магазина" class="n3VNCb" src="https://avatars.mds.yandex.net/get-mpic/1331400/img_id1336494957230503886.jpeg/orig" data-noaft="1" jsname="HiaYvf" jsaction="load:XAeZkd;" style="width: 250px; height: 360px; margin: 0px;">
+        <div class="c1" id="mainmenu">
+          <span id="span" class="vector">Grid</span>
+          <ul>
+            <li><a href="books.html">How it Works</a>
+              <li><a href="courses.html">Who We Are</a>
+              <li><a href="webinars.html">What We Do</a>
+              <li><a href="blog.html">Contact Us</a>
+          </ul>
+          <button id="button">Sign In</button>
         </div>
-        <div id="con2">
-            <img alt="15 лучших зимних шин — Рейтинг 2020 года (Топ 15)" class="n3VNCb" src="https://www.expertcen.ru/uploads/article/rating/2017/06/941/offer/330_d17cef1e.jpeg" data-noaft="1" jsname="HiaYvf" jsaction="load:XAeZkd;" style="width: 300px; height: 196px; margin: 0px;">
-            <img alt="Пылесос Holt HT-VC-008 купить недорого в Минске, обзор характеристик –  Shop.by" class="n3VNCb" src="https://shop.by/images/holt_ht_vc_008_1.jpg" data-noaft="1" jsname="HiaYvf" jsaction="load:XAeZkd;" style="width: 320px; height: 200px; margin: 0px;">
+        <div class="c2">
+            <svg width="801" height="753" viewBox="0 0 100 753" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="-41" y="251" width="1376" height="600" rx="99" transform="rotate(-45 -41 251)" fill="#FFEAA7"/>
+                </svg>
         </div>
+        <div class="c3" id="text">Combine fine images <br>
+          To represent a product </div>
+            <div class="c4">
+                <svg width="270" height="464" viewBox="0 0 270 464" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="270" height="464" rx="20" fill="#FDCB6E"/>
+                    </svg>
+                    <svg width="470" height="380" viewBox="0 0 470 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="470" height="380" rx="20" fill="#00B894"/>
+                        </svg>
+                        <svg width="170" height="222" viewBox="0 0 170 222" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="170" height="222" rx="20" fill="#A29BFE"/>
+                            </svg>
+
+                            <svg width="170" height="222" viewBox="0 0 170 222" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <rect width="170" height="222" rx="20" fill="#FF7675"/>
+                              </svg>
+                                        
+            </div>
+            <div class="c5">
+                <svg width="334" height="146" viewBox="0 0 334 146" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g filter="url(#filter0_dd)">
+                    <rect x="32" y="16" width="270" height="82" rx="41" fill="white"/>
+                    </g>
+                    <defs>
+                    <filter id="filter0_dd" x="0" y="0" width="334" height="146" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+                    <feOffset dy="16"/>
+                    <feGaussianBlur stdDeviation="16"/>
+                    <feColorMatrix type="matrix" values="0 0 0 0 0.14902 0 0 0 0 0.196078 0 0 0 0 0.219608 0 0 0 0.08 0"/>
+                    <feBlend mode="multiply" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+                    <feOffset dy="8"/>
+                    <feGaussianBlur stdDeviation="12"/>
+                    <feColorMatrix type="matrix" values="0 0 0 0 0.14902 0 0 0 0 0.196078 0 0 0 0 0.219608 0 0 0 0.1 0"/>
+                    <feBlend mode="multiply" in2="effect1_dropShadow" result="effect2_dropShadow"/>
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow" result="shape"/>
+                    </filter>
+                    </defs>
+                    </svg>
+                    
+                    <svg width="270" height="284" viewBox="0 0 270 284" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="270" height="284" rx="20" fill="#E84393"/>
+                        </svg>
+                        
+                    <svg width="370" height="356" viewBox="0 0 370 356" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="370" height="356" rx="20" fill="#6C5CE7"/>
+                        </svg>
+                        <svg width="170" height="222" viewBox="0 0 170 222" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="170" height="222" rx="20" fill="#FF7675"/>
+                            </svg>
+                                                    
+            </div>
+          </div> 
         
-        <div id="con3">
-            <span>Первая замена масла — Ford Focus Hatchback, 1.8 л., 2007 года на DRIVE2</span>
-            <img alt="Первая замена масла — Ford Focus Hatchback, 1.8 л., 2007 года на DRIVE2" class="n3VNCb" src="https://a.d-cd.net/55793u-960.jpg" data-noaft="1" jsname="HiaYvf" jsaction="load:XAeZkd;" style="width: 250px; height: 360px; margin: 0px;">
-        </div>
-        <div id="con4">
-            <img alt="Детские коляски купить в рассрочку Минск Витебск Могилев Гомель" class="n3VNCb" src="https://kenga.by/thumb/2/aS5l36w85OOluS3ZdM4tJw/r/d/progulochnaya_kolyaska_razdel_1.jpg" data-noaft="1" jsname="HiaYvf" jsaction="load:XAeZkd;" style="width: 290px; height: 180px; margin: 0px;">
-        
-            <img alt="Колонки компьютерные Sven SPS-606 - отзывы покупателей, владельцев в  интернет магазине М.Видео - Москва - Москва" class="n3VNCb" src="https://img.mvideo.ru/Pdb/50047744b.jpg" data-noaft="1" jsname="HiaYvf" jsaction="load:XAeZkd;" style="width: 300px; height: 220px; margin: 0px;">
-        </div>
 </body>
 
 </html>

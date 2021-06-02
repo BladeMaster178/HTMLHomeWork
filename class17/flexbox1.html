@@ -6,29 +6,32 @@
     <meta charset="utf-8">
     <title>flexbox</title>
     <style>
-       .container{
+      .vector{
 
-display: flex;
+left: 27.5%;
+right: 27.5%;
+top: 27.5%;
+bottom: 27.5%;
 
-flex-direction: column;
-
-flex-wrap: wrap;
-
-justify-content: flex-start;
-
-border: 1px solid black;
-
-background-color: #ffe5b4;
-
-padding: 50px;
+border: 3.5px solid black;
 }
 
+.vector1{
+
+position: absolute;
+left: 27.5%;
+right: 27.5%;
+top: 27.5%;
+bottom: 27.5%;
+
+border: 3.5px solid black;
+}
 #mainmenu {
-    background: lightgrey;
+    background: grey;
     position: relative;
     overflow: hidden;
-    height: 500px;
-    margin: 30px 0
+    height: 10vh;
+    margin: 0px 0
 }
 #mainmenu ul {
     list-style: none;
@@ -36,59 +39,113 @@ padding: 50px;
     padding: 0;
     position: relative;
     left: 50%;
-    float: left;
     font: 14px Arial, Helvetica, sans-serif;
     height: 40px
 }
 #mainmenu ul li {
     position: relative;
-    left: -50%;
+    left: -200%;
     float: left;
     margin: 0 0px;
     height: 40px
 }
 #mainmenu ul li a {
-    color: #fff;
+    color:black;
     display: block;
     text-decoration: none;
     padding: 0 15px;
-    line-height: 40px;
+    line-height: 60px;
 }
 #mainmenu ul li a:hover {
-    background-color:grey;
+    background-color:lightgrey;
 }
-button{
-    border-radius: 50%;
-    margin-top: 1%;
-    margin-left: 60%;
+#button{
+    border-radius: 30%;
+    width: 10%;
+    margin-left: 10%;
+    cursor: pointer;
+    font-size: 30px;
+line-height: 30px;
+}
+#span{
+    color: black;
+    font-size: 54px;
+line-height: 54px;
+margin-left: 20%;
+}
+.container{
+  flex-wrap:wrap;
+  display: flex;
+  flex-direction:column ;
+  
+}
+*{
+  margin: 0;
+   padding: 0;
+}
+.c1{
+  display:flex;
+  background: url(https://html5book.ru/wp-content/uploads/2015/05/background1.png);
+  height: 10vh;
+  width: 100%;
+  justify-content: flex-start;
+line-height: 40px;
+}          
+.c2{
+  display:flex;
+  background: url(https://html5book.ru/wp-content/uploads/2015/05/background1.png);
+  height:100vh;
+  width: 100%;
+  justify-content: flex-end;
+
 }
 
-span{
-    color: #fff;
+
+
+  #text{
+position: absolute;
+height: 80px;
+top: 296px;
+
+font-family: Inter;
+font-style: normal;
+font-weight: 90;
+font-size: 44px;
+line-height: 47px;
+display: flex;
+align-items: flex-end;
+text-align: center;
+letter-spacing: -1px;
+color: #2D3436;
 }
+
     </style>
 </head>
 
-<body>
+<body> 
     <div class="container">
-        <div id="mainmenu">
-            <span>DSING</span>
-            <ul>
-              <li><a href="books.html">Books</a>
-                <li><a href="courses.html">Courses</a>
-                <li><a href="webinars.html">Webinars</a>
-                <li><a href="blog.html">Blog</a>
-            </ul>
-            <button>subscribe</button>
-            <h2>Discover.Learn.Share</h2>
-<p> asfassdvdsdsdgwrhreseg4gwegegasfethhdtjnfyjm <br>
-    asfassdvdsdsdgwrhreseg4gwegegasfethhdtjnfyjm<br>
-    asfassdvdsdsdgwrhreseg4gwegegasfethhdtjnfyjm <br>
-    asfassdvdsdsdgwrhreseg4gwegegasfethhdtjnfyjm
-</p>
-            <img alt="Единый Сервисный центр — Яндекс.Карты" class="n3VNCb" src="https://avatars.mds.yandex.net/get-altay/2815220/2a00000172254ee357afeeef6c9d023ec330/L" data-noaft="1" jsname="HiaYvf" jsaction="load:XAeZkd;" style="width: 500px; height: 300px; margin: 0px;"> 
-          </div>
-    </div>
+        <div class="c1" id="mainmenu">
+          <span id="span" class="vector">Dsign</span>
+          <ul>
+            <li><a href="books.html">Books</a>
+              <li><a href="courses.html">Courses</a>
+              <li><a href="webinars.html">Webinars</a>
+              <li><a href="blog.html">Blog</a>
+          </ul>
+          <button id="button">Subscribe</button>
+        </div>
+        <div class="c2">
+            <svg width="801" height="590" viewBox="-100 -80 500 453" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="-41" y="251" width="500" height="600" rx="299" transform="rotate(-45 -41 251)" fill="#FF7675"/>
+                </svg>
+        </div>
+        <div class="c3" id="text">Discover. Learn. Share. <br>
+            To represent a product<br>
+            To represent a product<br>
+            To represent a product<br>
+            </div>
+         </div>
+        
 </body>
 
 </html>
