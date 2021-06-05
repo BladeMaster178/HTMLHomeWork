@@ -11,28 +11,34 @@ body {
   background: url(https://html5book.ru/wp-content/uploads/2015/05/background1.png);
 }
 
-img.rot {
-  animation: 1s linear 0s normal none infinite running rot;
-  width: 100px;
+
+
+.fan :active {
+  cursor: pointer;
+  position:absolute;
+  animation:  spin 5s  infinite alternate;
+
 }
-@keyframes rot {
+
+@keyframes spin {
+ 
+  
   0% {
     transform: rotate(0deg);
   }
   100% {
-    transform: rotate(360deg);
+    transform: rotate(720deg);
   }
-}
-
-
+} 
 
     </style>
 </head>
 
 <body>
    
-        
-        <img class="rot" src="fan.png"/>
+  <div class="fan">
+    <img  src="fan.png" width="300"/>
+  </div>
            
 </body>
 

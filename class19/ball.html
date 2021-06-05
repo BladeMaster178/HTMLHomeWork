@@ -12,20 +12,22 @@ body {
 }
 
 
-.ball {
+.ball :active {
+  cursor: pointer;
   position:absolute;
-  animation:  dws-moveLeft 5s linear infinite alternate;
+  animation:  moveLeft 5s  infinite alternate;
 
 }
 
-@keyframes dws-moveLeft {
+@keyframes moveLeft {
   from {left: 0;}
   to   {left: 80%;}
+  
   0% {
     transform: rotate(0deg);
   }
   100% {
-    transform: rotate(360deg);
+    transform: rotate(720deg);
   }
 } 
 
