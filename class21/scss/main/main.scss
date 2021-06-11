@@ -1,0 +1,22 @@
+main{
+  
+  height: 130vh;
+  padding: 10px;
+  .devices {
+    display: flex; 
+    flex-flow: row wrap;
+    font-size: 30px; 
+    justify-content: center; 
+    list-style-type: none; 
+  }
+
+  .comments {
+    list-style-type: none; 
+  }
+
+  .h {
+    display: flex;
+    justify-content: center;
+  }
+
+}
