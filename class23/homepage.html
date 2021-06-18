@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>World Wildlife</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+
+            <img src="https://www.worldwildlife.org/assets/structure/unique/logo-mobile-7024614efb6260da94c700e0560917949832ee62b098aa7de9708c42651caeb1.png"
+                alt="">
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            OUR WORK
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            PEOPLE
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            PLACES
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            WILDLIFE
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            About
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            How To Help
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                    <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                        <button type="button" class="btn btn-danger">DONATE</button>
+                        
+                        <div class="btn-group" role="group">
+                          <button id="btnGroupDrop1" type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                            <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                            <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                        <button type="button" class="btn btn-orange">ADOPT</button>
+                        
+                        <div class="btn-group" role="group">
+                          <button id="btnGroupDrop1" type="button" class="btn btn-orange dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                            <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                            <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                          </ul>
+                        </div>
+                      </div>
+    </nav>
+
+    <img src="https://files.worldwildlife.org/wwfcmsprod/misc/test2-nji-pandemics/img/hero/wwf-illo-spillover-hero-mobile-still.jpg"
+        width="100%" alt="">
+    <h2>Our mission is to conserve nature and reduce the most pressing threats to the diversity of life on Earth.
+    </h2>
+    <p>We organize our work around these six areas:</p>
+    <div class="container1">
+        <div>
+            <img alt="a lady farming"
+                src="https://fca7603378a4e3ebeab2-4e03b1ac88f27f7b20b4cf232f717383.ssl.cf1.rackcdn.com/photos/homepage/goal-pillar-food.jpg">
+            Food
+        </div>
+        <div>
+            <img alt="a sunset "
+                src="https://fca7603378a4e3ebeab2-4e03b1ac88f27f7b20b4cf232f717383.ssl.cf1.rackcdn.com/photos/homepage/goal-pillar-climate.jpg">
+            Climate
+        </div>
+        <div>
+            <img alt="a fresh water river"
+                src="https://fca7603378a4e3ebeab2-4e03b1ac88f27f7b20b4cf232f717383.ssl.cf1.rackcdn.com/photos/homepage/goal-pillar-fresh-water.jpg">
+            Fresh water
+        </div>
+        <div>
+            <img alt="elephants "
+                src="https://fca7603378a4e3ebeab2-4e03b1ac88f27f7b20b4cf232f717383.ssl.cf1.rackcdn.com/photos/homepage/goal-pillar-wildlife.jpg">
+            Wildlife
+        </div>
+        <div>
+            <img alt="a forest"
+                src="https://fca7603378a4e3ebeab2-4e03b1ac88f27f7b20b4cf232f717383.ssl.cf1.rackcdn.com/photos/homepage/shop_to_support_trees1.jpg">
+            Forests
+        </div>
+        <div>
+            <img alt="ocean fish"
+                src="https://fca7603378a4e3ebeab2-4e03b1ac88f27f7b20b4cf232f717383.ssl.cf1.rackcdn.com/photos/homepage/goal-pillar-oceans.jpg">
+            Oceans
+        </div>
+    </div>
+
+
+
+
+
+    <div class="container2">
+        <div>
+            <img src="https://c402277.ssl.cf1.rackcdn.com/photos/21138/images/story_full_width/Medium_WW225860.jpg?1623095268"
+                width="100%" alt="">
+            <h2>Here’s your very first look at the new, 400bhp-ish Audi RS3</h2>
+            <p>Here’s your very first look at the new, 400bhp-ish Audi RS3</p>
+        </div>
+        <div>
+            <img src="https://c402277.ssl.cf1.rackcdn.com/photos/21087/images/card_1_large/Deforestation_out_of_Supply_Chains_5-21.jpg?1621868924"
+                width="100%" height="100%" alt="">
+        </div>
+        <div>
+            <img src="https://c402277.ssl.cf1.rackcdn.com/photos/18868/images/card_1_large/image_%281%29.png?1617125503"
+                width="100%" alt="">
+        </div>
+        <div>
+            <img src="https://c402277.ssl.cf1.rackcdn.com/photos/21073/images/card_1_large/shutterstock_529456774_worker_solar_station.jpg?1621619276"
+                width="100%" height="85%" alt="">
+            <h2>Here’s your very first look at the new, 400bhp-ish Audi RS3</h2>
+        </div>
+        <div>
+            <img src="https://c402277.ssl.cf1.rackcdn.com/photos/21104/images/card_1_large/Medium_WW286823_1_.jpg?1621987519"
+                width="100%" height="100%" alt="">
+        </div>
+        <div>
+            <img src="https://c402277.ssl.cf1.rackcdn.com/photos/21130/images/card_2_large/T-shirt_Panda_Pride_Logo_White_.jpg?1622819156"
+                width="100%" alt="">
+            <h2>Here’s your very first look at the new, 400bhp-ish Audi RS3</h2>
+        </div>
+    </div>
+    <br>
+    <br>
+
+
+    <div class="container3">
+        <div>
+            <img src="https://c402277.ssl.cf1.rackcdn.com/photos/21139/images/card_2_large/Medium_WW1127424.jpg?1623097771"
+                width="100%" alt="">
+        </div>
+        <div>
+            <img src="https://c402277.ssl.cf1.rackcdn.com/photos/21121/images/card_2_large/Medium_WW2106387.jpg?1622640730"
+                width="100%" alt="">
+        </div>
+    </div>
+    <br>
+    <p>
+        HOW YOU CAN HELP
+    </p>
+    <br>
+    <div class="container3">
+        <div>
+            <img src="https://c402277.ssl.cf1.rackcdn.com/photos/20025/images/card_2_large/Arctic.01049110.jpg?1605925904"
+                width="100%" alt="">
+        </div>
+        <div>
+            <img src="https://c402277.ssl.cf1.rackcdn.com/photos/7222/images/card_2_large/cheetah.jpg?1605891687"
+                width="100%" alt="">
+        </div>
+    </div>
+    <br>
+    <br>
+    <button class="btn btn-orange">
+        LOG IN
+    </button>
+    <div class="line">
+
+    </div>
+
+    <div class="container5">
+        <div>
+            <h5>DISCOVER</h5>
+            <a href="">
+                Who we are
+            </a><br>
+            <a href="">
+                Financials
+            </a><br>
+            <a href="">
+                Latest stories
+            </a><br>
+            <a href="">
+                Our work
+            </a><br>
+            <a href="">Newsroom</a><br>
+            <a href="">En español<br>
+                <a href="">Travel
+                </a>
+        </div>
+        <div>
+            <h5>SUPPORT</h5>
+            <a href="">
+                Donate now
+            </a><br>
+            <a href="">
+                Make a monthly gift
+            </a><br>
+            <a href="">
+                Adopt an animal
+            </a><br>
+            <a href="">
+                Give in someone's name
+            </a><br>
+            <a href="">Gift and estate planning</a><br>
+            <a href="">Have you seen our TV ad?<br>
+            </a>
+        </div>
+        <div>
+            <h5>CONNECT</h5>
+            <a href="">
+                Take action
+            </a><br>
+            <a href="">
+                Get involved
+            </a><br>
+            <a href="">
+                Careers
+            </a><br>
+            <a href="">
+                Contact
+            </a><br>
+            <a href="">Help center
+            </a><br>
+            <a href="">WWF country offices
+            </a><br>
+            <a href="">Ethics reporting
+            </a>
+        </div>
+        <div>
+            <h5>GET THE LATEST CONSERVATION NEWS</h5>
+            <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label">First Name (required)</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+            </div>
+            <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label">Last Name (required)</label>
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="">
+            </div>
+            <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label">Email Address (required) is required</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+            </div>
+            <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label">Zip Code (required)</label>
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="">
+            </div>
+            <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label">Mobile Phone Number (optional)</label>
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="">
+            </div>
+            <p>By entering your mobile phone number above, you are opting to receive text messages from WWF. This field
+                is optional. Standard messaging rates apply.</p>
+                <br>
+                <div class="d-grid gap-2 col-6 mx-auto">
+                    <button class="btn  btn-orange" type="button">SIGN UP</button>
+                  </div>
+                  <br>
+            <p>This site is protected by reCAPTCHA and the Google <a href="">Privacy Policy</a> and <a href="">Terms of
+                    Service</a> apply.</p>
+        </div>
+
+    </div>
+
+    <div class="container4">
+        <div>
+            <img src="https://www.worldwildlife.org/assets/structure/unique/logo-c562409bb6158bf64e5f8b1be066dbd5983d75f5ce7c9935a5afffbcc03f8e5d.png"
+                alt="">
+        </div>
+        <div>
+            <h2>World Wildlife Fund</h2>
+            <p> 1250 24th Street, N.W.</p>
+            <p> Washington, DC 20037</p>
+        </div>
+        <div>
+            <p>CONNECT WITH US</p>
+            <img alt="a sunset "
+                src="https://fca7603378a4e3ebeab2-4e03b1ac88f27f7b20b4cf232f717383.ssl.cf1.rackcdn.com/photos/homepage/goal-pillar-climate.jpg">
+
+            <img alt="a sunset "
+                src="https://fca7603378a4e3ebeab2-4e03b1ac88f27f7b20b4cf232f717383.ssl.cf1.rackcdn.com/photos/homepage/goal-pillar-climate.jpg">
+
+            <img alt="a sunset "
+                src="https://fca7603378a4e3ebeab2-4e03b1ac88f27f7b20b4cf232f717383.ssl.cf1.rackcdn.com/photos/homepage/goal-pillar-climate.jpg">
+
+        </div>
+        <div>
+            <p>World Wildlife Fund Inc. is a nonprofit, tax-exempt charitable organization (tax ID number 52-1693387)
+                under Section 501(c)(3) of the Internal Revenue Code. Donations are tax-deductible as allowed by law.
+            </p>
+        </div>
+
+    </div>
+    <ul class="nav justify-content-center">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Site Terms</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Privacy Policy/Your Privacy Rights</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">State Disclosures</a>
+        </li>
+    </ul>
+
+    <p>© 2021 World Wildlife Fund. WWF® and ©1986 Panda Symbol are owned by WWF. All rights reserved.</p>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
