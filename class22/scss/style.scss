@@ -1,11 +1,12 @@
-@import "abstracts/variables";
+body {
+    padding-left: 11em;
+    font-family: "Times New Roman", Times, serif;
+    color: black;
+    background-color: lightgrey
+  }
 
 @import "components/buttons";
 
 @import "layout/header";
 @import "layout/main";
 @import "layout/footer";
-@import "layout/navigation";
-
-@import "pages/home";
-@import "pages/story";
