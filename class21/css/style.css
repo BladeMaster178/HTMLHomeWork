@@ -2,11 +2,24 @@ body {
   background: url(https://html5book.ru/wp-content/uploads/2015/05/background1.png);
 }
 
-header {
-  height: 100vh;
-  padding: 10px;
+.comments {
+  list-style-type: none;
 }
-header .menu {
+
+.devices {
+  display: flex;
+  flex-flow: row wrap;
+  font-size: 30px;
+  justify-content: center;
+  list-style-type: none;
+}
+
+.h {
+  display: flex;
+  justify-content: center;
+}
+
+.menu {
   display: flex;
   justify-content: space-around;
   padding: 1em 2em;
@@ -19,30 +32,6 @@ header .menu {
   border-left: 1px solid #aaa;
   border-bottom: 1px solid #aaa;
   border-top: 1px solid #aaa;
-}
-
-main {
-  height: 130vh;
-  padding: 10px;
-}
-main .devices {
-  display: flex;
-  flex-flow: row wrap;
-  font-size: 30px;
-  justify-content: center;
-  list-style-type: none;
-}
-main .comments {
-  list-style-type: none;
-}
-main .h {
-  display: flex;
-  justify-content: center;
-}
-
-footer {
-  height: 20vh;
-  padding: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

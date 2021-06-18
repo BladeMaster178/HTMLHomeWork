@@ -1,11 +1,8 @@
-header {
-  height: 100vh;
-  padding: 10px;
-}
-header .menu {
-  display: flex;
-  justify-content: space-around;
-  padding: 1em 2em;
+.menu {
+    display: flex;
+    justify-content: space-around;
+   
+    padding: 1em 2em;
   font-family: "Arial", sans-serif;
   text-decoration: none;
   font-weight: 700;
@@ -15,6 +12,4 @@ header .menu {
   border-left: 1px solid #aaa;
   border-bottom: 1px solid #aaa;
   border-top: 1px solid #aaa;
-}
-
-/*# sourceMappingURL=header.css.map */
+  }
