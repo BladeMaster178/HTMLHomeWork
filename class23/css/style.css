@@ -9,6 +9,8 @@
 
 .btn-right {
   margin-left: 90%;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .btn-background {
@@ -17,6 +19,20 @@
 
 .b {
   background-color: #f6f5f2;
+}
+
+.a {
+  padding-left: 50px;
+}
+
+.c {
+  padding-top: 50px;
+  padding-left: 150px;
+}
+
+.d {
+  padding-top: 50px;
+  padding-left: 50px;
 }
 
 .container {
@@ -109,7 +125,7 @@
 .container5 {
   display: grid;
   grid-template-columns: 0.2fr 0.2fr 0.2fr 1fr;
-  grid-template-rows: 700px;
+  grid-template-rows: 800px;
   background-color: black;
 }
 
