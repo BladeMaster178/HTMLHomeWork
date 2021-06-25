@@ -1,5 +1,10 @@
 .container1 {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 110px;
+    grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 200px;
+    margin-left: 10%;
 }
+
+.round {
+    border-radius: 100px;
+   }
