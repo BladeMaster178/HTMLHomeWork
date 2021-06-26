@@ -8,3 +8,35 @@
 .round {
     border-radius: 100px;
    }
+
+   .container2 {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows:  460px 10px;
+}
+
+.container3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 450px;
+}
+
+.container4 {
+    display: grid;
+    grid-template-columns: 0.2fr 1fr 1fr 1fr;
+    grid-template-rows: 230px;
+}
+
+.container5 {
+    display: grid;
+    grid-template-columns: 0.2fr 0.2fr 0.2fr 1fr;
+    grid-template-rows: 800px;
+    background-color: black;
+}
+
+
+   .container6 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-rows:  460px 10px;
+}
