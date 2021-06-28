@@ -3,7 +3,7 @@
 true + false == 1 //number
 6 / "3" == 2 //number
 "2" * "3" == 6 //number 
-4 + 5 + px == "9function pxa(a){return a instanceof oxa}" //string
+4 + 5 + "px" == "9px" //string
 "$" + 4 + 5 == "$45" //string
 "4" - 2 == 2 //number
 "4px" - 2 == NaN  //undefined

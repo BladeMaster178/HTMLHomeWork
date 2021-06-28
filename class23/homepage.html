@@ -142,8 +142,15 @@
                     </li>
 
                     <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
+                        <div class="btn-group" role="group">
+                            <button id="btnGroupDrop1" type="button" class="btn btn-dark dropdown-toggle"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                <input class="form-control me-2" type="search" placeholder="Type to search" aria-label="Search">
+
+                            </ul>
+                        </div>
                     </form>
                     <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
                         <button type="button" class="btn btn-danger">DONATE</button>
