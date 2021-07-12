@@ -12,13 +12,18 @@
     <script>
         // Задача 1 
         //Напишите функцию, которая получает три числа и возвращает их сумму.
-        function sumOfNumbers(num1 = Number(prompt("введите первое число")), num2 = Number(prompt("введите второе число")), num3 = Number(prompt("введите третье число"))) {
+        function sumOfNumbers(num1 , num2 , num3) {
+            num1 = parseInt(prompt("введите первое число"))
+            num2 = parseInt(prompt("введите второе число"))
+            num3 = parseInt(prompt("введите третье число"))
             return num1 + num2 + num3;
         }
         console.log("Сумма чисел равна =", sumOfNumbers());
         // Задача 2
         //Напишите функцию, которая подсчитывает сумму чисел от 1 до заданного X
-        function sumOfNumbersFromOneTillX(sum = 0, x = Number(prompt("введите число X")), i) {
+        function sumOfNumbersFromOneTillX(sum , x , i) {
+            sum = 0;
+            x = parseInt(prompt("введите число X"))
             for (let i = 1; i <= x; i++) { // цикл выполняется пока не найдет все числа в диапазоне От 1 до X
                 sum += i; // увеличение суммы 
 
@@ -29,8 +34,9 @@
 
         // Задача 3
         //Напишите функцию, которая подсчитывает сумму цифр числа.
-        function getSumNumber(num = Number(prompt("введите число чтобы найти сумму его цифр"))) {
-            let sum = 0, tmp;
+        function getSumNumber(num ,sum,tmp) {
+            sum = 0;
+            num = parseInt(prompt("введите число чтобы найти сумму его цифр"));
 
             while (num) {
 
@@ -51,7 +57,8 @@
 
         // Задача 4
         //Напишите функцию, которая считает факториал числа.
-        function factorial(m = Number(prompt("введите число чтобы посчитать его факториал"))) {
+        function factorial(m) {
+            m = parseInt(prompt("введите число чтобы посчитать его факториал"))
             return (m != 1) ? m * factorial(m - 1) : 1;
         }
         console.log("Факториал числа равен =", factorial());

@@ -12,18 +12,33 @@
     <script>
         //Задача1
         // Создайте функцию, которая получает в качестве аргументов три числа и возвращает наименьшее из них
-        function min(num1 = Number(prompt("введите первое число")), num2 = Number(prompt("введите второе число")), num3 = Number(prompt("введите третье число"))) {
+        function min(num1, num2, num3) {
+            num1 = parseInt(prompt("введите первое число"));
+            num2 = parseInt(prompt("введите второе число"));
+            num3 = parseInt(prompt("введите третье число"));
             let min = Math.min(num1, num2, num3);
             return min;
         }
         console.log("Наименьшее число равно =", min());
+
+
         //Задача2
         //Создайте функцию, которая получает в качестве аргументов значения суток, часов и минут, а возвращает соответствующее им количество секунд.
+        function getTime(days, hours, minutes) {
+            days = parseInt(prompt("введите количество дней"))
+            hours = parseInt(prompt("введите количество часов"))
+            minutes = parseInt(prompt("введите количество минут"))
+            return (86400 * days + 3600 * hours + 60 * minutes)
+
+        }
+
+        console.log("Колличество секунд=", getTime());
 
 
         //Задача3
         //Напишите рекурсивную функцию для подсчёта факториала числа.
-        function getFactorial(n = Number(prompt("введите число для вычисления его факториала"))) {
+        function getFactorial(n) {
+            n = parseInt(prompt("введите число для вычисления его факториала"))
             if (n === 1) {
                 return 1;
             }
@@ -40,16 +55,14 @@
             let digit, result = 0
 
             while (n) {
-                digit = n % 10  //  Get right-most digit. Ex. 123/10 → 12.3 → 3
-                result = (result * 10) + digit  //  Ex. 123 → 1230 + 4 → 1234
-                n = n / 10 | 0  //  Remove right-most digit. Ex. 123 → 12.3 → 12
+                digit = n % 10
+                result = (result * 10) + digit
+                n = n / 10 | 0
             }
 
             return result
         }
 
-
-        // Usage: 
         console.log(
             "Перевернутое число: " + flipInt(+prompt("Введите число для записи его наоборот"))
         )
