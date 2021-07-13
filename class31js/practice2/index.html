@@ -12,14 +12,33 @@
     <script>
         //Задача1
         // Создайте функцию, которая получает в качестве аргументов три числа и возвращает наименьшее из них
-        function min(num1, num2, num3) {
+        // function min(num1, num2, num3) {
+        //     num1 = parseInt(prompt("введите первое число"));
+        //     num2 = parseInt(prompt("введите второе число"));
+        //     num3 = parseInt(prompt("введите третье число"));
+        //     let min = Math.min(num1, num2, num3);
+        //     return min;
+        // }
+        // console.log("Наименьшее число равно =", min());
+
+        function numMin(num1, num2, num3) {
             num1 = parseInt(prompt("введите первое число"));
             num2 = parseInt(prompt("введите второе число"));
             num3 = parseInt(prompt("введите третье число"));
-            let min = Math.min(num1, num2, num3);
-            return min;
+
+            if (num1 < num2 && num1 < num3) {
+                return num1;
+            }
+            if (num2 < num1 && num2 < num3) {
+                return num2
+            }
+            if (num3 < num1 && num3 < num2) {
+                return num3;
+            }
         }
-        console.log("Наименьшее число равно =", min());
+        console.log("Наименьшее число равно =", numMin());
+
+
 
 
         //Задача2
@@ -37,14 +56,14 @@
 
         //Задача3
         //Напишите рекурсивную функцию для подсчёта факториала числа.
-        function getFactorial(n) {
-            n = parseInt(prompt("введите число для вычисления его факториала"))
-            if (n === 1) {
+        function getFactorial(m) {
+            m = parseInt(prompt("введите число для вычисления его факториала"))
+            if (m === 1) {
                 return 1;
             }
             else {
 
-                return n * getFactorial(n - 1);
+                return m * getFactorial(m - 1);
             }
         }
         // let result = getFactorial();
@@ -71,36 +90,77 @@
         //Примечание 1. Ищем только решения в действительных числах, комплексные не нужны!
         //Примечание 2. Для получения квадратного корня используйте стандартную функцию JS: [Math.sqrt()].
 
-        let a = +prompt("Введите A:"),
-            b = +prompt("Введите B:"),
-            c = +prompt("Введите C:"),
-            arr = kvur(a, b, c),
-            d = arr[0];
-        console.log("Дискриминант: " + d);
-        console.log(
-            d < 0
-                ? "Корней нет"
-                : d === 0
-                    ? "Один корень: " + arr[1]
-                    : `Два корня: ${arr[1]} и ${arr[2]}`
-        );
+        // let a = +prompt("Введите A:"),
+        //     b = +prompt("Введите B:"),
+        //     c = +prompt("Введите C:"),
+        //     arr = kvur(a, b, c),
+        //     d = arr[0];
+        // console.log("Дискриминант: " + d);
+        // console.log(
+        //     d < 0
+        //         ? "Корней нет"
+        //         : d === 0
+        //             ? "Один корень: " + arr[1]
+        //             : `Два корня: ${arr[1]} и ${arr[2]}`
+        // );
 
-        /**
-         * Вычисление корней квадратного уравнения.
-         * Если корни есть, возвращает массив из дискриминанта и двух чисел-корней.
-         * Если корней нет - возвращает массив из одного элемента - отрицательного дискриминанта
-         */
-        function kvur(a, b, c) {
-            let discr = (a, b, c) => b * b - 4 * a * c;
-            // Если значение дискриминанта квадратного уравнения < 0, то  корней на множестве действительных чисел нет. 
-            let d = discr(a, b, c);
-            if (d < 0) return [d];
+        // /**
+        //  * Вычисление корней квадратного уравнения.
+        //  * Если корни есть, возвращает массив из дискриминанта и двух чисел-корней.
+        //  * Если корней нет - возвращает массив из одного элемента - отрицательного дискриминанта
+        //  */
+        // function kvur(a, b, c) {
+        //     let discr = (a, b, c) => b * b - 4 * a * c;
+        //     // Если значение дискриминанта квадратного уравнения < 0, то  корней на множестве действительных чисел нет. 
+        //     let d = discr(a, b, c);
+        //     if (d < 0) return [d];
 
-            let x1 = (-b + Math.sqrt(d)) / (2 * a),
-                x2 = (-b - Math.sqrt(d)) / (2 * a);
+        //     let x1 = (-b + Math.sqrt(d)) / (2 * a),
+        //         x2 = (-b - Math.sqrt(d)) / (2 * a);
 
-            return [d, x1, x2];
+        //     return [d, x1, x2];
+        // }
+
+
+        // let a, b, c, d, x1, x2;
+        // a = parseInt(prompt("Введите A:"));
+        // b = parseInt(prompt("Введите B:"));
+        // c = parseInt(prompt("Введите C:"));
+        // d = b * b - 4 * a * c;
+        // x1 = (-b + Math.sqrt(d)) / (2 * a),    x2 = (-b - Math.sqrt(d)) / (2 * a);
+        // if (d < 0) {
+        //     console.log("Корней нет")
+        // }
+        // if (d == 0) {
+        //     console.log("Один корень:", x1,x2)
+
+        // }
+        // if (d > 0) {
+        //     console.log("Два корня:", x1, x2)
+        // }
+
+        function kvadratyrav(a, b, c, d, x1, x2) {
+            a = parseInt(prompt("Введите A:"));
+            b = parseInt(prompt("Введите B:"));
+            c = parseInt(prompt("Введите C:"));
+            d = b * b - 4 * a * c;
+            x1 = (-b + Math.sqrt(d)) / (2 * a), x2 = (-b - Math.sqrt(d)) / (2 * a);
+            if (d < 0) {
+                console.log("Корней нет")
+            }
+            if (d == 0) {
+                console.log("Один корень:", x1)
+
+            }
+            if (d > 0) {
+                console.log("Два корня:", x1, x2)
+            }
         }
+        kvadratyrav();
+
+
+
+        
     </script>
 
 
