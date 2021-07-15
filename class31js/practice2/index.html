@@ -56,18 +56,28 @@
 
         //Задача3
         //Напишите рекурсивную функцию для подсчёта факториала числа.
-        function getFactorial(m) {
-            m = parseInt(prompt("введите число для вычисления его факториала"))
-            if (m === 1) {
-                return 1;
-            }
-            else {
+        // function getFactorial(m) {
+        //     m = parseInt(prompt("введите число для вычисления его факториала"))
+        //     if (m === 1) {
+        //         return 1;
+        //     }
+        //     else {
 
-                return m * getFactorial(m - 1);
+        //         return m * getFactorial(m - 1);
+        //     }
+        // }
+        // // let result = getFactorial();
+        // console.log("Факториал числа равен =", getFactorial());
+
+        function factorial(number, count) {
+            let result = 1;
+            number = parseInt(prompt("введите число чтобы найти его факториал"));
+            for (count = number; count > 1; count--) {
+                result *= count;
             }
-        }
-        // let result = getFactorial();
-        console.log("Факториал числа равен =", getFactorial());
+            return result;
+        };
+        console.log("Факториал числа равен =", factorial());
         //Задача4
         //Напишите рекурсивную функцию, которая разворачивает введённое число задом наперёд. Например, если на вход функция получает 1234, вернуть она должна 4321
         function flipInt(n) {

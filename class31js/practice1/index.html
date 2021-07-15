@@ -12,7 +12,7 @@
     <script>
         // Задача 1 
         //Напишите функцию, которая получает три числа и возвращает их сумму.
-        function sumOfNumbers(num1 , num2 , num3) {
+        function sumOfNumbers(num1, num2, num3) {
             num1 = parseInt(prompt("введите первое число"))
             num2 = parseInt(prompt("введите второе число"))
             num3 = parseInt(prompt("введите третье число"))
@@ -21,7 +21,7 @@
         console.log("Сумма чисел равна =", sumOfNumbers());
         // Задача 2
         //Напишите функцию, которая подсчитывает сумму чисел от 1 до заданного X
-        function sumOfNumbersFromOneTillX(sum , x , i) {
+        function sumOfNumbersFromOneTillX(sum, x, i) {
             sum = 0;
             x = parseInt(prompt("введите число X"))
             for (let i = 1; i <= x; i++) { // цикл выполняется пока не найдет все числа в диапазоне От 1 до X
@@ -34,7 +34,7 @@
 
         // Задача 3
         //Напишите функцию, которая подсчитывает сумму цифр числа.
-        function getSumNumber(num ,sum,tmp) {
+        function getSumNumber(num, sum, tmp) {
             sum = 0;
             num = parseInt(prompt("введите число чтобы найти сумму его цифр"));
 
@@ -57,10 +57,21 @@
 
         // Задача 4
         //Напишите функцию, которая считает факториал числа.
-        function factorial(m) {
-            m = parseInt(prompt("введите число чтобы посчитать его факториал"))
-            return (m != 1) ? m * factorial(m - 1) : 1;
-        }
+        // function factorial(m) {
+        //     m = parseInt(prompt("введите число чтобы посчитать его факториал"))
+        //     return (m != 1) ? m * factorial(m - 1) : 1;
+        // }
+        // console.log("Факториал числа равен =", factorial());
+
+
+        function factorial(number, count) {
+            let result = 1;
+            number = parseInt(prompt("введите число чтобы найти его факториал"));
+            for (count = number; count > 1; count--) {
+                result *= count;
+            }
+            return result;
+        };
         console.log("Факториал числа равен =", factorial());
     </script>
 
