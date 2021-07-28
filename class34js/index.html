@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //Задача 1
+        //Создайте функцию, которая принимает три числа: два первых должны быть длиной сторон катетов 
+        //прямоугольного треугольника, а третье – длиной гипотенузы. Функция возвращает true, если такой 
+        //прямоугольный треугольник возможен, и false, если нет.
+        function triangle(a, b, c) {
+            return (a * a + b * b == c * c && a > 0 && b > 0 && c > 0)
+
+        }
+        let tr = (a, b, c) => (a * a + b * b == c * c && a > 0 && b > 0 && c > 0);
+
+        console.log(tr(3, 4, 5))
+        //Задача 2
+        // Создайте функцию repeat(str, n), которая возвращает строку, 
+        //состоящую из n повторений строки str. По умолчанию n=2, str — пустая строка.
+        function repeat(str = '', n = 2) {
+
+            return str.repeat(n);
+        }
+
+        console.log(repeat(''));
+        console.log(repeat(''));
+
+        // function addToString(string = '', a = 2) {
+        //     if (a === 0) return string;
+        //     else return string + addToString(a - 1)
+        // }
+
+        //Задача 3
+        // Создайте функцию, которая принимает два аргумента – количество учеников в классе и количество парт в кабинете. Функция возвращает строку вида «не хватает 2 парт» / «1 лишняя парта».
+        function classroom(students, parta, count) {
+            // students = parseInt(prompt("введите количество учеников"));
+            // parta = parseInt(prompt("введите количество парт"));
+            count = parta;
+            if (parta > students) {
+                count = parta - students;
+                console.log(count, "лишняя парта")
+            }
+
+            else
+                count = students - parta;
+            console.log("не хватает", count, "парт")
+        }
+        classroom(24, 22);
+
+        //Задача 4
+        // Создайте функцию, которая получает в качестве аргумента оценку по 10-балльной шкале. Для ошибочных аргументов (0, «B») функция возвращает текстовую ошибку, для верных – их текстовое описание:
+
+
+        function mark(grade) {
+            //grade = parseInt(prompt("введите оценку"));
+            // for(grade=1; grade <= 10;grade++ )
+
+            let str1 = "Grade:1, Label:Unsatisfactory , Russian equivalent[1]	US equivalent:[F]";
+            let str2 = "Grade:2, Label:Unsatisfactory , Russian equivalent[2]	US equivalent:[F]";
+            let str3 = "Grade:3, Label:Satisfactory , Russian equivalent[3-]	US equivalent:[C]";
+            let str4 = "Grade:4, Label:Satisfactory , Russian equivalent[3]	US equivalent:[C+]";
+            let str5 = "Grade:5, Label:Almost good , Russian equivalent[3+]	US equivalent:[B-]";
+            let str6 = "Grade:6, Label:Good , Russian equivalent[4-]	US equivalent:[B]";
+            let str7 = "Grade:7, Label:Very good, Russian equivalent[4]	US equivalent:[B+]";
+            let str8 = "Grade:8, Label:Almost excellent , Russian equivalent[4+]	US equivalent:[A-]";
+            let str9 = "Grade:9, Label:Excellen, Russian equivalent[5]	US equivalent:[A]";
+            let str10 = "Grade:10, Label:Briliant , Russian equivalent[5+]	US equivalent:[A+]";
+
+
+            if (grade == 1) {
+                return str1
+            }
+            if (grade == 2) {
+                return str2
+            }
+            if (grade == 3) {
+                return str3
+            }
+            if (grade == 4) {
+                return str4
+            }
+            if (grade == 5) {
+                return str5
+            }
+            if (grade == 6) {
+                return str6
+            }
+            if (grade == 7) {
+                return str7
+            }
+            if (grade == 8) {
+                return str8
+            }
+            if (grade == 9) {
+                return str9
+            }
+            if (grade == 10) {
+                return str10
+
+            }
+
+            else
+                console.log("Такой оценки не существует")
+        }
+        console.log(mark(4));
+        //Задача 5
+        // Используя цикл do..while, создайте функцию, которая принимает числа через prompt(), 
+        //пока не будет введено число 0
+
+        function myPromptNumber(a) {
+            do {
+                console.log(a);
+                a++;
+            }
+            while (Number((a = prompt('Enter number:')) != 0))
+            return Number(a);
+        }
+        console.log(myPromptNumber());
+        //Задача 6
+        //Перепишите функцию из задачи 5 так, чтобы она принимала числа, 
+        //пока их сумма остаётся меньше 100, выводила эту сумму в консоль, а возвращала количество введённых чисел.
+
+        // function myPromptNumber(a, sum = 0, k = 0) {
+        //     do {
+        //         a = prompt('Enter number:');
+        //         sum += a;
+        //         k++;
+        //     }
+        //     while (sum < 100)
+        //     return (k);
+        // }
+        // console.log(myPromptNumber());
+
+        //Задача 7
+        //Создайте функцию, которая принимает число в качестве аргумента и проверяет, является ли это число простым.
+
+        function prime(num) {
+            if (num === 2) {
+                return true;
+            } else if (num > 1) {
+                for (var i = 2; i < num; i++) {
+
+                    if (num % i !== 0) {
+                        return true;
+                    } else if (num === i * i) {
+                        return false
+                    } else {
+                        return false;
+                    }
+                }
+            } else {
+                return false;
+            }
+
+        }
+        console.log(prime(121))
+
+
+        //Задача 8
+        //Создайте функцию, которая принимает в качестве аргумента целое число, 
+        //соответствующее порядковому номеру месяца. Если месяц с таким номером существует, функция возвращает имя 
+        //сезона (лето, осень, зима, весна), к которому относится месяц. Если нет –сообщение об ошибке.
+
+        function poragoda(month) {
+
+            month = month - 0; // Преобразование строкового элемента в число
+
+            //month = parseInt(prompt("Введите Номер Месяца"));
+
+            if (month == 1 || month == 2 || month == 12) { // условие
+                console.log("Пора года Зима")
+            }
+            if (month == 3 || month == 4 || month == 5) { // условие
+                console.log("Пора года Весна")
+            }
+            if (month == 6 || month == 7 || month == 8) {  // условие
+                console.log("Пора года Лето")
+            }
+            if (month == 9 || month == 10 || month == 11) {  // условие
+                console.log("Пора года Осень")
+            }
+
+            if (month < 1) { // условие
+                console.log("Такого месяца не существует")
+            }
+            if (month > 12) { // условие
+                console.log("Такого месяца не существует")
+            }
+        }
+        console.log(poragoda(6))
+        //Задача 9
+        //Создайте функцию, которая выводит в консоль числа от 10 до 99,
+        // заканчивающиеся на 7 или делящиеся на 7 (в убывающем порядке)
+
+        function NumbersFrom10To99() {
+            for (let i = 10; i <= 999; i++)
+                if (i % 7 == 0 && i % 10 == 7)
+                    console.log(i)
+        }
+        console.log(NumbersFrom10To99())
+        //Задача 10
+        //Создайте функцию, которая для чисел от 2 до 20 выводит в консоль все их делители.
+
+        function summaOt2Do20() {
+            let a = 2;
+            let sum = 1;
+            while (a <= 20) {
+
+                console.log("Число", a, "его делители")
+                for (let b = 1; b < a; b = b + 1) {
+
+                    if (a % b == 0) {
+                        console.log(b)
+
+                        sum += b;
+                    }
+                    // if (b == a - 1) {
+                    //     console.log("=",sum)
+                    // }
+
+                }
+                a++;
+            }
+        }
+        console.log(summaOt2Do20())
+        //Задача 11
+        //Решите задачу 10 в общем виде: вместо 2 и 20 – аргументы x и y.
+        function summaOtXDoY() {
+            //let x = parseInt(prompt("Введите X"));
+            // let y = parseInt(prompt("Введите Y"));
+            let x = 1;
+            let y = 10;
+            let sum = 1;
+            while (x <= y) {
+
+                console.log("Число", x, "его делители")
+                for (let b = 1; b < x; b = b + 1) {
+
+                    if (x % b == 0) {
+                        console.log(b)
+
+                        sum += b;
+                    }
+
+                }
+                x++;
+            }
+        }
+        console.log(summaOtXDoY())
+        //Задача 12
+        //Создайте функцию с параметрами size (число) и unit (строка). 
+        //В unit передаются единицы измерения информации («Кб», «Мб», «Гб»), 
+        //в size – количество таких единиц. Функция возвращает количество байт в size.
+        // function byte(size, unit) {
+        //     size = size - 0; //size параметр число
+        //     unit = " "; // unit параетр строка 
+
+        //     if (size >= 8 && size <= 1024) {
+        //         unit = ' Кб';
+        //     } else {
+
+        //         if (size >= 1000 && size <= 10000) {
+        //             unit = ' Мб'
+        //         } else {
+        //             if (size >= 10000 && size <= 100000) {
+        //                 unit = ' Гб';
+        //             } else {
+        //                 if (size <= 8)
+        //                 unit = ' бит';
+        //             }
+        //         }
+        //         }
+
+        //         return size + unit
+
+        //     }
+        //     console.log(byte(4096))
+
+        function byte(gb, mb, kb) {
+            // gb = parseInt(prompt("введите количество гигобайт"))
+            // mb = parseInt(prompt("введите количество мегобайт"))
+            // kb = parseInt(prompt("введите количество килобайт"))
+            return (1073741824 * gb + 1048576 * mb + 1024 * kb)
+
+        }
+
+        console.log("Колличество байт=", byte(0, 0, 4));
+
+        //Задача 13
+        // Создайте функцию, которая ищет наибольший общий делитель двух чисел.
+        function obshijdelit(d, e, n, max) {
+            // d = parseInt(prompt("введите первое число"));
+            // e = parseInt(prompt("введите второе число"));
+            if (d < e)
+                n = d;
+            else
+                n = e;
+            for (let i = 1; i <= n; i++)
+                if (d % i == 0 && e % i == 0)
+                    max = i;
+            return max;
+        }
+        console.log("Наибольший общий делитель равен:", obshijdelit(12, 9))
+        //Задача 14
+        //Решите задачу 13 через рекурсию.
+        function obshijdelitel(a, b) //Рекурсивная функция нахождения НОД 2-x чисел
+        {
+            if (a == 0)
+                return b;
+            return obshijdelitel(b % a, a);
+        }
+        console.log("НОД для 2-x введенных чисел: ", obshijdelitel(12, 9));
+
+        //Задача 15
+        // Создайте функцию words(),  которая в зависимости от переданного в нее целого числа n, будет выводить слово «карандаш» в правильной форме («12 карандашей», но «22 карандаша»).
+
+        function word(n) {
+
+            let o = n % 100;
+            let s = '';
+            if (o >= 5 && o <= 20) {
+                s = ' карандашей';
+            } else {
+                let o2 = o % 10;
+                if (o2 === 1) {
+                    s = ' карандаш'
+                } else {
+                    if (o2 === 2 || o2 === 3 || o2 === 4) {
+                        s = ' карандаша';
+                    } else {
+                        s = ' карандашей';
+                    }
+
+                }
+            }
+
+            return n + s
+        }
+
+        console.log(word(1));
+        console.log(word(11));
+        console.log(word(21));
+
+        //Задача 15 Через Switch Case
+        // function word(n) {
+        //     let o = n % 100;
+        //     let s = '';
+        //     let o2 = o % 10;
+
+        //     switch (o, o2, s) {
+        //         case (o >= 5 && o <= 20):
+        //             s = ' карандашей';
+        //             break;
+        //         case (o2 === 1):
+        //             s = ' карандаш'
+        //             break;
+        //         case (o2 === 2 || o2 === 3 || o2 === 4):
+        //             s = ' карандаша';
+        //             break;
+        //         default:
+        //             s = ' карандашей';
+
+        //     }
+        //     return n + s
+        // }
+        // console.log(word(1));
+        // console.log(word(11));
+        // console.log(word(21));
+        //Задача 16
+        //Создайте функцию, которая проверяет, можно ли представить число в виде суммы квадратов двух целых однозначных чисел.
+
+        function sumkvadrat(n, sum = 0) {
+            // n = parseInt(prompt("Введите число для представления в виде суммы квадратов"));
+            console.log("Число", n);
+            for (let i = n - 1; i > 0; --i)
+                while (sum + i * i <= n) {
+                    if (sum > 0)
+                        console.log(" + ");
+                    else console.log(" = ");
+                    sum += i * i;
+                    console.log(i, "*", i);
+                }
+        }
+        console.log(sumkvadrat(12));
+    </script>
+
+</body>
+
+</html>

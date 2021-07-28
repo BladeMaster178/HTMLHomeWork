@@ -64,14 +64,15 @@
         // console.log("Факториал числа равен =", factorial());
 
 
-        function factorial(number, count) {
+        function factorial(number) {
             let result = 1;
-            number = parseInt(prompt("введите число чтобы найти его факториал"));
-            for (count = number; count > 1; count--) {
+            //number = parseInt(prompt("введите число чтобы найти его факториал"));
+            for (let count = number; count > 1; count--) {
                 result *= count;
             }
             return result;
         };
+        number = parseInt(prompt("введите число чтобы найти его факториал"));
         console.log("Факториал числа равен =", factorial());
     </script>
 
