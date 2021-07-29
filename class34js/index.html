@@ -172,27 +172,38 @@
         function poragoda(month) {
 
             month = month - 0; // Преобразование строкового элемента в число
+            let strd1 = "Пора года Зима";
+            let strd2 = "Пора года Весна";
+            let strd3 = "Пора года Лето";
+            let strd4 = "Пора года Осень";
+            let strd5 = "Такого месяца не существует";
 
             //month = parseInt(prompt("Введите Номер Месяца"));
 
             if (month == 1 || month == 2 || month == 12) { // условие
-                console.log("Пора года Зима")
+                // console.log("Пора года Зима")
+                return str1
             }
             if (month == 3 || month == 4 || month == 5) { // условие
-                console.log("Пора года Весна")
+                // console.log("Пора года Весна")
+                return strd2
             }
             if (month == 6 || month == 7 || month == 8) {  // условие
-                console.log("Пора года Лето")
+                // console.log("Пора года Лето")
+                return strd3
             }
             if (month == 9 || month == 10 || month == 11) {  // условие
-                console.log("Пора года Осень")
+                // console.log("Пора года Осень")
+                return strd4
             }
 
             if (month < 1) { // условие
-                console.log("Такого месяца не существует")
+                return strd5
+                //console.log("Такого месяца не существует")
             }
             if (month > 12) { // условие
-                console.log("Такого месяца не существует")
+                return strd5
+                //console.log("Такого месяца не существует")
             }
         }
         console.log(poragoda(6))
