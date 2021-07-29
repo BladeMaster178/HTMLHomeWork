@@ -120,7 +120,7 @@
                 console.log(a);
                 a++;
             }
-            while (Number((a = prompt('Enter number:')) != 0))
+            while (Number((a = prompt('Введите число:')) != 0))
             return Number(a);
         }
         console.log(myPromptNumber());
@@ -128,16 +128,16 @@
         //Перепишите функцию из задачи 5 так, чтобы она принимала числа, 
         //пока их сумма остаётся меньше 100, выводила эту сумму в консоль, а возвращала количество введённых чисел.
 
-        // function myPromptNumber(a, sum = 0, k = 0) {
-        //     do {
-        //         a = prompt('Enter number:');
-        //         sum += a;
-        //         k++;
-        //     }
-        //     while (sum < 100)
-        //     return (k);
-        // }
-        // console.log(myPromptNumber());
+        function myPromptNumber(z, sum = 0, k = 0) {
+            do {
+                z = prompt('Введите число:');
+                sum += z;
+                k++;
+            }
+            while (sum < 100)
+            return (k);
+        }
+        console.log(myPromptNumber());
 
         //Задача 7
         //Создайте функцию, которая принимает число в качестве аргумента и проверяет, является ли это число простым.
