@@ -115,29 +115,39 @@
         // Используя цикл do..while, создайте функцию, которая принимает числа через prompt(), 
         //пока не будет введено число 0
 
-        function myPromptNumber(a) {
+        // function myPromptNumber(a) {
+        //     do {
+        //         console.log(a);
+        //         a++;
+        //     }
+        //     while (Number((a = prompt('Введите число:')) != 0))
+        //     return Number(a);
+        // }
+        // console.log(myPromptNumber());
+        function myPromptNumber() {
+            let a;
             do {
-                console.log(a);
-                a++;
+                a = prompt('Введите число:');
+                
             }
-            while (Number((a = prompt('Введите число:')) != 0))
-            return Number(a);
+            while (a != 0)
+            // return a;
         }
         console.log(myPromptNumber());
         //Задача 6
         //Перепишите функцию из задачи 5 так, чтобы она принимала числа, 
         //пока их сумма остаётся меньше 100, выводила эту сумму в консоль, а возвращала количество введённых чисел.
 
-        function myPromptNumber(z, sum = 0, k = 0) {
-            do {
-                z = prompt('Введите число:');
-                sum += z;
-                k++;
-            }
-            while (sum < 100)
-            return (k);
-        }
-        console.log(myPromptNumber());
+        // function myPromptNumber(z, sum = 0, k = 0) {
+        //     do {
+        //         z = prompt('Введите число:');
+        //         sum += z;
+        //         k++;
+        //     }
+        //     while (sum < 100)
+        //     return (k);
+        // }
+        // console.log(myPromptNumber());
 
         //Задача 7
         //Создайте функцию, которая принимает число в качестве аргумента и проверяет, является ли это число простым.
@@ -212,8 +222,8 @@
         // заканчивающиеся на 7 или делящиеся на 7 (в убывающем порядке)
 
         function NumbersFrom10To99() {
-            for (let i = 10; i <= 999; i++)
-                if (i % 7 == 0 && i % 10 == 7)
+            for (let i = 99; i > 10; i--)
+                if (i % 7 == 0 || i % 10 == 7)
                     console.log(i)
         }
         console.log(NumbersFrom10To99())
@@ -357,34 +367,46 @@
         }
 
         console.log(word(1));
-        console.log(word(11));
-        console.log(word(21));
+        console.log(word(12));
+        console.log(word(34));
+        console.log(word(100));
+        console.log(word(121));
 
         //Задача 15 Через Switch Case
-        // function word(n) {
-        //     let o = n % 100;
-        //     let s = '';
-        //     let o2 = o % 10;
+        function word1(n) {
+            let o = n % 100;
+            let s = '';
+            let o2 = o % 10;
+            let x = o >= 5 && o <= 20
+            let y = o2 === 1
+            let z = o2 === 2 || o2 === 3 || o2 === 4
+            switch (n) {
+                // case (o >= 5 && o <= 20):
+                case x:
+                    s = ' карандашей';
+                    break;
+                // case (o2 === 1):
+                case y:
+                    s = ' карандаш'
+                    break;
+                // case (o2 === 2 || o2 === 3 || o2 === 4):
+                case z:
+                    s = ' карандаша';
+                    break;
+                default:
+                    s = ' карандашей';
 
-        //     switch (o, o2, s) {
-        //         case (o >= 5 && o <= 20):
-        //             s = ' карандашей';
-        //             break;
-        //         case (o2 === 1):
-        //             s = ' карандаш'
-        //             break;
-        //         case (o2 === 2 || o2 === 3 || o2 === 4):
-        //             s = ' карандаша';
-        //             break;
-        //         default:
-        //             s = ' карандашей';
-
-        //     }
-        //     return n + s
-        // }
+            }
+            return n + s
+        }
+        console.log(word1(1));
+        console.log(word1(11));
+        console.log(word1(21));
         // console.log(word(1));
-        // console.log(word(11));
-        // console.log(word(21));
+        // console.log(word(12));
+        // console.log(word(34));
+        // console.log(word(100));
+        // console.log(word(121));
         //Задача 16
         //Создайте функцию, которая проверяет, можно ли представить число в виде суммы квадратов двух целых однозначных чисел.
 

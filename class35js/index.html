@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //Задача1
+        //Создайте массив и в цикле заполните его чётными числами от 2 до 20.
+        let arr1 = []
+        for (let i = 2; i <= 20; i += 2) {
+            arr1.push(i);
+        }
+        console.log(arr1)
+
+        //Задача2
+        //Преобразуйте массив из задачи 1 так, чтобы его элементы стали равны своему индексу, умноженному на 5.
+        let arr2 = []
+        for (let i = 2; i <= 20; i += 2) {
+            arr2.push(i);
+        }
+        for (let i = 0; i < arr2.length; i++) {
+            arr2[i] = arr2[i] * 5;
+        }
+        console.log(arr2)
+
+      
+        //Задача3
+        // Получите от пользователя три числа, создайте из них массив. Используя циклы, 
+        //найдите наибольшее из чисел и разделите на него каждый элемент массива.
+        let arr3 = [1, 5, 4]
+        let max;
+        for (let i = 0; i <= max; i++ ) {
+            arr3.push(i);
+        }
+        console.log(arr3)
+        //Задача4
+        //Преобразуйте массив из задачи 2 так, чтобы его элементы расположились в обратном порядке.
+        let arr4 = []
+        for (let i = 20; i >= 2; i -= 2) {
+            arr4.push(i);
+        }
+        console.log(arr4)
+
+    </script>
+
+</body>
+
+</html>
