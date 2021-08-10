@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //Задача1
+        //Создайте объект obj = { a: 1, b: 2, c: 3 }.Выведите в консоль элемент с ключом 'c' двумя способами: 
+        //через квадратные скобки и через точку.Затем выведите все свойства объекта через цикл for..in.
+        obj = { a: 1, b: 2, c: 3 }
+        console.log("элемент с ключом 'c'=" + " " + obj["c"])
+        console.log("элемент с ключом 'c'=" + " " + obj.c)
+        for (let propName in obj)
+            console.log(propName + ":" + obj[propName]);
+
+        //Задача2
+        //Создайте объект city, добавьте ему свойства name(название города, строка) и population(население, число).
+        city = { name: "Minsk", population: 2009786 }
+        console.log("Город =" + " " + city["name"])
+        console.log("Население =" + " " + city["population"])
+
+        console.log("Город=" + " " + city.name)
+        console.log("Население'=" + " " + city.population)
+        for (let propName in city)
+            console.log(propName + ":" + city[propName]);
+        //Задача3
+        //Создайте массив из шести объектов такого же вида, как city из задачи 2 – по одному 
+        //для каждого областного города Беларуси.
+        let arr = [city1 = { name: "Minsk", population: 2009786 }, city2 = { name: "Hrodna", population: 1017976 },
+        city3 = { name: "Gomel", population: 1375286 }, city4 = { name: "Brest", population: 1338044 },
+        city5 = { name: "Mogelev", population: 1014843 }, city6 = { name: "Vitebsk", population: 1120364 }]
+
+        console.log(arr)
+        //Задача4
+        // Напишите функцию, которая принимает массив из задачи 3 в качестве параметра 
+        //и выводит в консоль информацию о каждом городе.
+
+        arr1 = [city1 = { name: "Minsk", population: 2009786 }, city2 = { name: "Hrodna", population: 1017976 },
+        city3 = { name: "Gomel", population: 1375286 }, city4 = { name: "Brest", population: 1338044 },
+        city5 = { name: "Mogelev", population: 1014843 }, city6 = { name: "Vitebsk", population: 1120364 }]
+
+        arr1.citysOfBelarus = function () {
+            console.log(arr1)
+        }
+        arr1.citysOfBelarus();
+
+        //Задача5
+        //Создайте в объектах с городами из задачи 3 метод getInfo, 
+        //который возвращает строку с информацией о городе 
+        //(например, в таком формате: "Город Добруш, население – 18760 человек").
+        city1 = { name: "Minsk", population: 2009786 }, city2 = { name: "Hrodna", population: 1017976 },
+            city3 = { name: "Gomel", population: 1375286 }, city4 = { name: "Brest", population: 1338044 },
+            city5 = { name: "Mogelev", population: 1014843 }, city6 = { name: "Vitebsk", population: 1120364 }
+
+        city1.getInfo = function () {
+            console.log(city1)
+        };
+        city1.getInfo();
+
+        city2.getInfo = function () {
+            console.log(city2)
+        };
+        city2.getInfo();
+
+        city3.getInfo = function () {
+            console.log(city3)
+        };
+        city3.getInfo();
+
+        city4.getInfo = function () {
+            console.log(city4)
+        };
+        city4.getInfo();
+
+        city5.getInfo = function () {
+            console.log(city5)
+        };
+        city5.getInfo();
+
+        city6.getInfo = function () {
+            console.log(city6)
+        };
+        city6.getInfo();
+        //Задача6
+        // Создайте объект с информацией о себе (имя, фамилия, любимое занятие). 
+        //Добавьте в него метод, который выводит эту информацию в консоль в удобочитаемом формате.
+        aboutMe = { name: "Artiom", surname: "Trukhan", hobby: "Skating" }
+        aboutMe.getInfo = function () {
+            console.log(aboutMe)
+        };
+        aboutMe.getInfo();
+        //1. Напишите функцию, которая получает в качестве аргументов объект и строку 
+        //и проверяет, есть ли в этом объекте свойство с именем, равным этой строке.
+        function objAndString(obj1 = { d: 1, e: 2, f: 3, g: "qwerty" }, stroka = "qwerty") {
+        }
+        //2. Создайте объект для хранения своего любимого кулинарного рецепта.
+        //Он должен содержать название, ингредиенты и их необходимое количество(в виде вложенного объекта),
+        // а также количество порций(больше 1).Напишите функцию, которая получает "рецепт", подсчитывает,
+        // сколько каждого ингредиента нужно на одну порцию, и выводит информацию об этом в консоль.
+        obj2 = { name: " ", ingridienty: " ", kolichestvoIngridientov: " ", kolichestvoporcii: " " }
+        //3. Создайте объект "Цилиндр"(свойства – радиус и высота).
+        //Добавьте в него метод, который считает объём цилиндра(используя this).
+        // cilindr = { R: 5, h: 10 }
+        // cilindr.getInfo = function (R=5, h=10) {
+        //     //let V, R = 5, h = 10;
+        //     let π = 3.14;
+        //     V = π * R ** 2 * h;
+        //     console.log("Обьем Цилиндра Равен:=" + V)
+        // };
+        // cilindr.getInfo();
+        let cilindr = {
+           // R: 5, h: 10,
+            introduce: function (R=5,h=10) {
+                return this.h * Math.PI * R * R;
+                // π=3.14, V= (π * R ** 2 * h)
+                console.log("Обьем Цилиндра Равен:=" + this.cilindr)
+            }
+        }
+        cilindr.introduce();
+        //4. Выберите пингвина из[списка вымышленных пингвинов на Википедии]
+        //(https://en.wikipedia.org/wiki/List_of_fictional_penguins)
+        // и опишите его в виде объекта (не менее трёх полей; например, имя, создатель и источник). 
+        //Добавьте этому объекту свойство canFly. Добавьте два метода: sayHello, который выводит в консоль
+        // приветствие и представление вашего пингвина, и fly, который в зависимости от значения свойства canFly 
+        //(true или false) определяет, может ли пингвин летать, и сообщает об этом в консоль.
+    </script>
+</body>
+
+</html>
