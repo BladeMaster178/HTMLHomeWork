@@ -10,11 +10,12 @@
     border-radius: 100px;
 }
 
-//    .container2 {
-//     display: grid;
-//     grid-template-columns: 2fr 1fr 1fr;
-//     grid-template-rows:  460px 10px;
-// }
+   .container7 {
+    display: grid;
+   // grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+     grid-template-columns: 2fr 1fr 1fr;
+   // grid-template-rows:  460px 10px;
+}
 
 .container3 {
     display: grid;

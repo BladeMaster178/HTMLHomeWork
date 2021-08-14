@@ -98,38 +98,115 @@
         aboutMe.getInfo();
         //1. Напишите функцию, которая получает в качестве аргументов объект и строку 
         //и проверяет, есть ли в этом объекте свойство с именем, равным этой строке.
-        function objAndString(obj1 = { d: 1, e: 2, f: 3, g: "qwerty" }, stroka = "qwerty") {
+        function objAndString(obj1 = {}, stroka) {
+            obj1 = {
+                name: "Artiom", surname: "Trukhan", birth: 1995, job: "Cook", hobby: "Skating"
+            };
+
+            stroka = "Cook"
+
+            if (stroka == obj1.job) {
+                console.log('has');
+            }
+            else {
+                console.log('nop');
+            }
+
         }
+        objAndString()
+
+
         //2. Создайте объект для хранения своего любимого кулинарного рецепта.
         //Он должен содержать название, ингредиенты и их необходимое количество(в виде вложенного объекта),
         // а также количество порций(больше 1).Напишите функцию, которая получает "рецепт", подсчитывает,
         // сколько каждого ингредиента нужно на одну порцию, и выводит информацию об этом в консоль.
-        obj2 = { name: " ", ingridienty: " ", kolichestvoIngridientov: " ", kolichestvoporcii: " " }
+        recept = {
+            name: "Рецепт Спагетти",
+            egg: 2,
+            spaghetti: 50,
+            doubleCream: 10,
+            tomatoSauce: 10,
+            numberOfMeals: 2
+        }
+        recept.getRecept = function () {
+            console.log(recept)
+        };
+        recept.getRecept();
+
+
         //3. Создайте объект "Цилиндр"(свойства – радиус и высота).
         //Добавьте в него метод, который считает объём цилиндра(используя this).
-        // cilindr = { R: 5, h: 10 }
-        // cilindr.getInfo = function (R=5, h=10) {
-        //     //let V, R = 5, h = 10;
-        //     let π = 3.14;
-        //     V = π * R ** 2 * h;
-        //     console.log("Обьем Цилиндра Равен:=" + V)
-        // };
-        // cilindr.getInfo();
-        let cilindr = {
-           // R: 5, h: 10,
-            introduce: function (R=5,h=10) {
-                return this.h * Math.PI * R * R;
-                // π=3.14, V= (π * R ** 2 * h)
-                console.log("Обьем Цилиндра Равен:=" + this.cilindr)
+        cylinder = {
+            radius: 5, heigh: 10,
+            getVolume: function () {
+                console.log("Radius:=" + this.radius)
+                console.log("Height:=" + this.heigh);
+                let volume = Math.PI * this.radius * this.radius * this.heigh;
+                console.log("Volume:=" + this.volume);
             }
         }
-        cilindr.introduce();
+        cylinder.getVolume();
+
+        // function cylinder(r, h) {
+        //     var v = Math.PI * r * r * h;
+        //     return v
+        // }
+        // console.log(cylinder(5, 10))
+
+        // function conus(r, h) {
+        //     var v = Math.PI * r * h / 3;
+        //     return v
+        // }
+        // console.log(conus(5,10))
+
         //4. Выберите пингвина из[списка вымышленных пингвинов на Википедии]
         //(https://en.wikipedia.org/wiki/List_of_fictional_penguins)
         // и опишите его в виде объекта (не менее трёх полей; например, имя, создатель и источник). 
         //Добавьте этому объекту свойство canFly. Добавьте два метода: sayHello, который выводит в консоль
         // приветствие и представление вашего пингвина, и fly, который в зависимости от значения свойства canFly 
         //(true или false) определяет, может ли пингвин летать, и сообщает об этом в консоль.
+
+        penguine = {
+            name: "penguine",
+            creator: "madagascar",
+            istochnik: "wikipedia",
+            canFly: true,
+            sayHello: function () {
+                console.log("Hello My Name is Penguine")
+            },
+            canFly: function () {
+                if (this.canFly = true) {
+                    console.log("Yes i Can Fly")
+                }
+                else
+                    console.log("No i Cant Fly")
+            }
+
+        }
+        penguine.sayHello();
+        penguine.canFly();
+
+        // function circlelenght(r) {
+        //     r = 20;
+        //     console.log({ r });
+        //     return 2 * Math.PI * r.radius
+        // }
+        // let b = 10;
+        // console.log({ b });
+        // let b = { radius: 10 }
+        // console.log(circlelenght(b));
+        // console.log(b);
+
+        // let circleA = {
+        //     x: 24, y: 36, D: 12
+        // }
+        // let circleB = {}
+        // for (let key in circleA) {
+        //     circleB[key] = circleA[key]
+        //     console.log(key, circleA[key]);
+        // }
+        // console.log({ b });
+
     </script>
 </body>
 
