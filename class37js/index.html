@@ -147,17 +147,6 @@
         }
         cylinder.getVolume();
 
-        // function cylinder(r, h) {
-        //     var v = Math.PI * r * r * h;
-        //     return v
-        // }
-        // console.log(cylinder(5, 10))
-
-        // function conus(r, h) {
-        //     var v = Math.PI * r * h / 3;
-        //     return v
-        // }
-        // console.log(conus(5,10))
 
         //4. Выберите пингвина из[списка вымышленных пингвинов на Википедии]
         //(https://en.wikipedia.org/wiki/List_of_fictional_penguins)
@@ -172,19 +161,22 @@
             istochnik: "wikipedia",
             canFly: true,
             sayHello: function () {
-                console.log("Hello My Name is Penguine")
+                console.log("Hello My Name is Rico. Im Penguine")
             },
-            canFly: function () {
-                if (this.canFly = true) {
+            fly: function () {
+
+                if (this.canFly == true) {
                     console.log("Yes i Can Fly")
                 }
-                else
+                if (this.canFly == false) {
+
                     console.log("No i Cant Fly")
+                }
             }
 
         }
         penguine.sayHello();
-        penguine.canFly();
+        penguine.fly();
 
         // function circlelenght(r) {
         //     r = 20;
