@@ -137,11 +137,12 @@
         //3. Создайте объект "Цилиндр"(свойства – радиус и высота).
         //Добавьте в него метод, который считает объём цилиндра(используя this).
         cylinder = {
-            radius: 5, heigh: 10,
+            radius: 5,
+            heigh: 10,
             getVolume: function () {
                 console.log("Radius:=" + this.radius)
                 console.log("Height:=" + this.heigh);
-                let volume = Math.PI * this.radius * this.radius * this.heigh;
+                this.volume = Math.PI * this.radius * this.radius * this.heigh;
                 console.log("Volume:=" + this.volume);
             }
         }
@@ -163,10 +164,10 @@
             Species: "Penguin",
             Age: 13,
             Birth: "Antarctica",
-            Status:"Alive",
+            Status: "Alive",
             canFly: true,
             sayHello: function () {
-                console.log("Hello My Name is Rico.Im Penguin")
+                console.log("Hello My Name is" + " " + this.name + ".Im Penguin")
             },
             fly: function () {
 
