@@ -106,10 +106,10 @@
             stroka = "Cook"
 
             if (stroka == obj1.job) {
-                console.log('has');
+                console.log('avalible');
             }
             else {
-                console.log('nop');
+                console.log('not avalible');
             }
 
         }
@@ -123,16 +123,24 @@
         recept = {
             name: "Рецепт Спагетти",
             egg: 2,
-            spaghetti: 50,
-            doubleCream: 10,
-            tomatoSauce: 10,
-            numberOfMeals: 2
+            spaghetti: 0.5,
+            doubleCream: 0.1,
+            tomatoSauce: 0.1,
+            numberOfMeals: 1
         }
         recept.getRecept = function () {
-            console.log(recept)
+            if (this.numberOfMeals == 1) {
+                this.egg + this.spaghetti + this.doubleCream + this.tomatoSauce
+            }
+            console.log(this.numberOfMeals)
+            if (this.numberOfMeals > 1) {
+                for (let i = 0; i <= this.numberOfMeals; i++)
+                    i * (this.egg + this.spaghetti + this.doubleCream + this.tomatoSauce)
+            }
+            console.log(this.numberOfMeals)
+
         };
         recept.getRecept();
-
 
         //3. Создайте объект "Цилиндр"(свойства – радиус и высота).
         //Добавьте в него метод, который считает объём цилиндра(используя this).
@@ -158,8 +166,7 @@
 
         penguine = {
             name: "Rico",
-            creator: "madagascar",
-            // istochnik: "wikipedia",
+            creator: "Madagascar",
             Gender: "Male",
             Species: "Penguin",
             Age: 13,

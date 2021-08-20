@@ -3,9 +3,10 @@
     overflow: hidden; 
    }
    .scale img {
-    transition: 1s; 
+    transition: 0.3s; 
     display: block;
    }
    .scale img:hover {
-    transform: scale(1.2);
+       cursor: pointer;
+    transform: scale(1.1);
    }

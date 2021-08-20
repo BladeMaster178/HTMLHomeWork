@@ -1,32 +1,14 @@
- * {
-    margin: 0;
-    padding: 0;
-   }
+* {
+  margin: 0;
+  padding: 0;
+}
 
 @import "components/buttons";
-@import"components/text";
+@import "components/text";
 
 @import "layout/header";
 @import "layout/main";
 @import "layout/footer";
 @import "layout/line";
 @import "layout/container1";
-@import"layout/scale";
-
-@media all and (min-width: 992px) {
-	.navbar .nav-item .dropdown-menu{ display: none; }
-	.navbar .nav-item:hover .dropdown-menu{ display: block; }
-	.navbar .nav-item .dropdown-menu{ margin-top:0; }  
-}
-
-@media (min-width: 480px) and (max-width: 1024px) {
-   .l {
-     font-size: calc(14px + (18 - 14) * ((100vw - 480px) / (1024 - 480)));
-   }
- }
- 
- @media (min-width: 480px) and (max-width: 1024px) {
-   .j {
-     font-size: calc(8px + (18 - 14) * ((100vw - 480px) / (1024 - 480)));
-   }
- }
+@import "layout/scale";
