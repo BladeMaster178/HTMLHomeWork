@@ -11,40 +11,82 @@
 <body>
 
     <script>
+        // function g() {
+        //     debugger;
+        //     var c = 0;
+        //     const addOne = function () {
+        //         c++;
+        //         return c;
+        //     }
+        //     return addOne;
+        // }
+        // var i = g();
+        // console.log(i());
+        // console.log(i());
+        // var j = g();
+        // console.log(j());
+        //console.clear();
+        // function f1() {
+        //     debugger;
+        //     randomRange = (x, y) => Math.floor(Math.random() * (y - x + 1) + x);
+
+        //     getarr = () => {
+        //         let arr = [];
+        //         for (let i = 0; i < 20; i++) arr.push(randomRange(10, 19));
+        //         return arr;
+        //     };
+
+        //     let counter = {};
+
+        //     for (let j = 0; j < 1000; j++) {
+        //         let arr = getarr();
+
+        //         for (let i = 0; i < arr.length; i++)
+        //             counter[arr[i]] = (counter[arr[i]] ? counter[arr[i]] : 0) + 1;
+        //     }
+        //     console.log(counter);
+        // }
+        // f1();
         //Задача1
         // Напишите функцию, которая создаёт и возвращает массив длиной 20 элементов, 
         //каждый из которых – случайное число от 1 до 50.
-        // function ar() {
-        //     let arr = Math.random(new Array(20))
-        //     return arr;
-        // }
-        // console.log(ar());
 
-        for (var a = [], i = 0; i < 20; ++i) a[i] = i;
-        function shuffle(array) {
-            var tmp, current, top = array.length;
-            if (top)
-                while (--top) {
-                    current = Math.floor(Math.random() * (top + 1));
-                    tmp = array[current];
-                    array[current] = array[top];
-                    array[top] = tmp;
-                }
-            return array;
+        function genrandom() {
+            let mass = [];
+            for (let i = 0; i < 20; i++) {
+                mass.push(Math.round((Math.random() * 49 + 1)))
+            }
+            // counter = {}
+            // for (let i in arr)
+            //     counter[arr[i]] = +1
+            return mass;
         }
-        console.log(shuffle(a));
+        console.log(genrandom());
 
 
         //Задача2
         // Перепишите функцию из задачи 1, так, чтобы она принимала три аргумента: длину нужного массива,
         // минимальное и максимальное значения элементов.
+        function genrandom2(masslength, min, max) {
+            let mass = [];
+            for (let i = 0; i < masslength; i++) {
 
+                mass.push(Math.round((Math.random() * (max - min) + min)))
+
+            }
+            // counter = {}
+            // for (let i in arr)
+            //     counter[arr[i]] = +1
+            return mass;
+        }
+        console.log(genrandom2(20, -10, 10));
 
         //Задача3
         //Напишите функцию, которая проверяет, начинается ли строка на https:// и заканчивается ли она на .html. 
         //Если оба условия выполнены, функция возвращает true, в ином случае – false.
         function stringHTML(str = "http://abcd.html") {
-            if (str.indexOf("http://"), str.lastIndexOf(".html")) {
+            // str.indexOf("http://") == 0 &&  str.lastIndexOf(".html") == str.length;
+            if (str.indexOf("http://") == 0 && str.lastIndexOf(".html") == str.length - 5) {
                 return true;
             }
             else
@@ -53,52 +95,68 @@
         console.log(stringHTML());
         //Задача4
         //Напишите функцию, которая считает, сколько раз определённый символ встречается в строке.
+        // function countChars_long(str) {
+        //     let result = {};
+        //     let chars = str.split("");
+        //     for (let i = 0; i < chars.length; i++) {
+        //         let count = result[chars[i]] ? result[chars[i]] : 0;
+        //         result[chars[i]] = count + 1;
+        //     }
+        //     return result;
+        // }
+
         function countChars_long(str) {
-            var result = {};
-            var chars = str.split("");
-            for (var i = 0; i < chars.length; i++) {
-                var count = result[chars[i]] ? result[chars[i]] : 0;
+            let result = {};
+            let chars = str.split("");
+            for (let i = 0; i < chars.length; i++) {
+                let count = result[chars[i]] ? result[chars[i]] : 0;
                 result[chars[i]] = count + 1;
             }
             return result;
         }
-
         // function countChars_short(str) {
         //     return str.split("").reduce((r, c) => (r[c] = (r[c] || 0) + 1, r), {});
         // }
 
-        console.log(countChars_long("aabbaccd"));
+        //  console.log(countChars_long("aabbaccd"));
+
+        function ccc(s, ch) {
+            let o =  countChars_long(s)
+            return o[ch] ? 0 : o[ch]
+           
+        }
+        console.log(ccc("aabbaccd"));
         // console.log(countChars_short("aabbaccd"));
 
         //Задача5
         //Перепишите функцию из задачи 4 так, чтобы она считала большие и 
         //маленькие буквы одним и тем же символом (например, 'A' == 'a').
 
-        function countChars(str) {
-            var result = {};
-            var chars = str.split("");
-            for (var i = 0; i < chars.length; i++) {
-                var count = result[chars[i]] ? result[chars[i]] : 0;
-                result[chars[i]] = count + 1;
+        // function countChars(str) {
+        //     var result = {};
+        //     var chars = str.split("");
+        //     for (var i = 0; i < chars.length; i++) {
+        //         var count = result[chars[i]] ? result[chars[i]] : 0;
+        //         result[chars[i]] = count + 1;
+        //     }
+        //     return result;
+        // }
+        // console.log(countChars("aAbBaCcd"));
+
+        // let letters = ['a', 'b', 'c', 'A', 'B', 'C', '(', ')', '+', '-', '~', '*'];
+        //&& letters[i] === letters[i].toLowerCase()
+        function letters() {
+            let letters = ['a', 'b', 'c', 'A', 'B', 'C'];
+            for (let i = 0; i < letters.length; i++) {
+                if (letters[i] == letters[i].toLowerCase() && letters[i] == letters[i].toLowerCase()) {
+                    console.log(letters[i] + ":" + true);
+                }
+                else {
+                    console.log(letters[i] + ":" + false);
+                }
             }
-            return result;
         }
-
-
-        console.log(countChars("aAbBaCcd"));
-
-
-
-        var letters = ['a', 'b', 'c', 'A', 'B', 'C', '(', ')', '+', '-', '~', '*'];
-
-        for (var i = 0; i < letters.length; i++) {
-            if (letters[i] === letters[i].toUpperCase()
-                && letters[i] !== letters[i].toLowerCase()) {
-                console.log(letters[i] + ": " + true);
-            } else {
-                console.log(letters[i] + ": " + false);
-            }
-        }
+        letters();
 
         //Задача6
         // Напишите функцию, которая выводит в консоль текущие дату, месяц и год в формате «24 января 2019».
@@ -128,6 +186,7 @@
             arr[0] = 19;
             newArr[0] = { initial: 19, sqrt: 4.358898943540674, floor: true, ceil: false }
         }
+
         // console.log(mas());
         //Задача1.2
         // Добавьте в каждый элемент массива из задачи 1 ещё одно свойство: значение sqrt, округленное до сотых.
@@ -149,6 +208,15 @@
         }
 
         console.log(isPalindrome('abcdedcba'));
+
+        function isPalindrome1(word) {
+            word.trim();
+            for (let count; count < word.length; count++) {
+                if (word[count] !== word[word.length - count - 1]) return false
+            }
+            return true
+        }
+        console.log(isPalindrome1('abcdedcba'));
 
         // isPalindrome('abcdedcba');
         // isPalindrome('abcded');
@@ -204,11 +272,16 @@
         //Напишите функцию, которая заменяет все повторяющиеся символы в строке на звёздочки. Например, строка "я учусь
         // программированию" должна преобразоваться в "я уч&ast;сь прог&ast;ам&ast;и&ast;&ast;в&ast;н&ast;ю".
 
+
         //Задача1.8
         // Напишите функцию, которая возвращает текущий день недели на русском языке.
-        // let testDate = new Date(1500000000000)
-        // console.log(testDate.toString())
-        console.log(new Date(2021,0,1,));
+        function data() {
+            // let testDate = new Date(1500000000000)
+            // console.log(testDate.toString())
+            console.log(new Date(2021, 0, 1,));
+
+        }
+        data();
         //Задача1.9
        // Напишите функцию, которая принимает у пользователя дату в формате "ДД-ММ-ГГГГ" и, 
        //используя функцию из задачи 8, выдает в консоль день недели для этой даты

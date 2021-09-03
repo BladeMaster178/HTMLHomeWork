@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //Задача 1
+        //Напишите функцию counterFactory(start, step), которая при вызове возвращает 
+        //другую функцию – счётчик tictoc(). start – стартовое значение счётчика, step – его шаг. 
+        //При каждом вызове tictoc увеличивает значение счётчика на step
+        function counterFactory(start = 0, step = 1) {
+            var result = start;
+            return function tictoc() {
+                result = start;
+                start += step;
+                return result;
+            };
+        }
+        let counter = tictoc();
+        console.log(counter());
+        console.log(counter());
+        console.log(counter());
+        console.log(counter());
+        console.log(counter());
+        console.log(counter());
+
+        //Задача 2
+        // Напишите функцию take(tictoc, x), которая вызывает функцию tictoc заданное число (x) раз
+        // и возвращает массив с результатами вызовов.
+        function tictoc(start = 0, step = 1) {
+            var result = start;
+            return function () {
+                result = start;
+                start += step;
+                return result;
+            };
+        };
+
+        function take(tictoc, x) {
+            let arr = [];
+            for (let i = 0; i < x; i += 1)
+                arr.push(tictoc());
+
+            return arr;
+        }
+
+        console.log(take(tictoc(0, 2), 5));
+        console.log(take(tictoc(0, 2), 6));
+        console.log(take(tictoc(0, 5), 4));
+
+        //Задача 3
+        //Разбейте текст этой задачи на отдельные слова, удаляя по пути точки и запятые,
+        //а полученные слова сложите в массив. Напишите функцию, которая возвращает массив из тех же слов, 
+        //но развёрнутых задом наперёд, причём массив должен быть отсортирован по количеству букв в слове.
+        // Напишите другую функцию, которая считает общее количество букв с во всех элементах массива
+        var str = "Разбейте текст этой задачи на отдельные слова удаляя по пути точки и запятые а полученные слова сложите в массив.";
+        var words = str.split(" ").join(" ").slice(0, 112);
+        // console.log(words);
+        function reverseString() {
+            return words.split("").reverse().join("");
+        }
+
+        console.log(reverseString());
+
+        //Задача 4
+        //Дан код:
+        //let obj = { greeting: "Привет" };
+        //function func(surname, name) {
+        //alert(this.greeting + ', ' + surname + ' ' + name);
+        //}
+        //func();  // тут должно вывести 'привет, Иванов Иван'
+        //Добавьте в последнюю строчку метод call() так, чтобы на экран вывелось 'Привет, Иванов Иван'.Слово 
+        //'привет' возьмите из свойства объекта obj, а 'Иванов' и 'Иван' задайте как параметры функциями.
+        let obj = { greeting: "Привет" };
+        function func(surname = "Иванов", name = "Иван") {
+            console.log(this.greeting + ', ' + surname + ' ' + name);
+        }
+        func.call(obj);  // тут должно вывести 'привет, Иванов Иван'
+        //Задача 5
+        //Перепишите задачу так, чтобы вместо call применялся apply.
+        let obj1 = { greeting: "Привет" };
+        function func(surname1 = "Иванов", name1 = "Иван") {
+            console.log(this.greeting + ', ' + surname1 + ' ' + name1);
+        }
+        func.apply(obj1);  // тут должно вывести 'привет, Иванов Иван'
+
+
+    </script>
+</body>
+
+</html>
