@@ -123,18 +123,37 @@
         //	* значение каждого свойства – массив городов;
         //	* каждый элемент массива – название города, население и место в общем рейтинге (rank).
 
-        function monthindex() {
-            let month = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"]
-            month.filter((month, idx) => {
-                let date = new Date();
-                date.setMonth(idx);
-                date.setDate(31)
-                return date.getMonth()===idx
-                 console.log(date);
-            })
-        }
-        monthindex();
 
+        let months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"]
+        // let a = month.filter((month, idx) => {
+        //     let date = new Date();
+        //     date.setMonth(idx);
+        //     date.setDate(31)
+        //     return date.getMonth()===idx
+        // })
+        // let a= month.map((month,idx)=> idx)
+        // let a = months.map((month, idx) => idx + 1 + "." + month)
+        // console.log(a);
+        // let days = ["вс", "пн", "вт", "ср", "чт", "пт", "сб"]
+
+        // let a = months.map((month, idx) => {
+        //     let date = new Date();
+        //     date.setMonth(idx + 1);
+        //     date.setDate(0);
+        //     // return days[date.getDay()];
+        //     return date.toString().slice(0, 3);
+        // })
+        // console.log(a);
+        months.sort((month1, month2) => {
+            return month1 > month2 ? 1 : -1
+        })
+        console.log(months);
+        let dates = ["01.10.2020", "10.01.2020", "30.08.1975"]
+        dates.sort((d1, d2) => {
+            return d1.split(".").reverse().join("") > d2.split(".").reverse().join("") ? 1 : -1
+
+        })
+        console.log(dates);
     </script>
 </body>
 
