@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<style>
+    .modal {
+        display: none;
+        position: fixed;
+        width: 30%;
+        height: 30%;
+        left: 35%;
+        top: 35%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 12px;
+    }
+
+    .modal {
+        display: flex;
+    }
+</style>
+
+<body>
+    <form name="search"> <label>Поиск по сайту:
+            <input type="text" name="search"> </label> <input type="submit" value="Искать!">
+    </form>
+    <hr>
+    <form name="search-person"> Поиск по посетителям: <table id="age-table">
+            <tr>
+                <td>Возраст:</td>
+                <td id="age-list"> <label> <input type="radio" name="age" value="young">до 18</label>
+                    <label> <input type="radio" name="age" value="mature">18-50</label> <label>
+                        <input type="radio" name="age" value="senior">более 50</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Дополнительно:</td>
+                <td> <input type="text" name="info[0]">
+                    <input type="text" name="info[1]"> <input type="text" name="info[2]">
+                </td>
+            </tr>
+        </table> <input type="submit" value="Искать!"> </form>
+
+
+    <script>
+        // Найдите (получите в переменную) на странице:
+        // 1.Все элементы label внутри таблицы. Должно быть 3 элемента.
+        labelTag = document.getElementById('age-table').getElementsByTagName('label')
+        console.log(labelTag);
+        // 2.Первую ячейку таблицы (со словом "Возраст").
+        firstTd = document.getElementById('age-table').rows[0].cells[0]
+        console.log(firstTd);
+        // 3.Вторую форму в документе.
+        secondForm = document.getElementsByTagName('form')[1]
+        console.log(secondForm);
+        // 4.Форму с именем search, без использования её позиции в документе.
+        searchForm = document.querySelector('form[name="search"]')
+        console.log(searchForm);
+        // 5.Элемент input в форме с именем search. Если их несколько, то нужен первый.
+        searchInput = document.querySelectorAll('form[name="search"] input')
+        console.log(searchInput);
+        // 6.Элемент с именем info[0], без точного знания его позиции в документе.
+        infoByName = document.getElementsByName("info[0]")[0]
+        console.log(infoByName);
+        // 7.Элемент с именем info[0], внутри формы с именем search-person.
+        searchPerson = document.querySelector('form[name="search-person"] [name="info[0]"]')
+        console.log(searchPerson);
+
+        //       ## DOM.Работа со страницей
+
+        // Все задания выполнять в одном JS - файле.Задания разделять комментариями, в которых указывать номера задач.
+
+        // 1. Дан элемент #elem.Добавьте ему класс "www".
+
+        // 2. Дан элемент #elem.Проверьте наличие у него класса "www", если есть - удалите класс
+
+        // 3. Напишите функцию поиска recursiveSearchTags, которая принимает на вход document и имя тега, 
+        // а возвращает массив из всех элементов соответствующих этому тегу.Поиск идет в теге body
+        // 4. Дан ul.Дан массив.Вставьте элементы этого массива в конец ul так, чтобы каждый элемент стоял в своем li.
+        // Сделайте так, чтобы четные позиции имели красный фон.
+        // 5. Дан элемент #elem.Найдите его соседа сверху и добавьте ему в конец текст '!'
+        // 6. Реализуйте функцию wrapInParagraph, которая находит текст(дочерние текстовые ноды) внутри элемента div и
+        // оборачивает текст в параграф
+        // 7. Реализуйте функцию normalizeClassNames, которая нормализует имена классов для всех элементов на странице.
+        // В данном случае это означает что происходит преобразование всех классов написанных используя kebab нотацию 
+        // в camelCase нотацию: text - center => textCenter
+       
+    </script>
+</body>
+
+</html>

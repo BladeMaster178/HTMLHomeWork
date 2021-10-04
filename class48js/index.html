@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 1. Сделайте так, чтобы по нажатию на кнопку выводился alert -->
+    <button onclick="alert('test');">Click me</button>
+    <!-- 2. Создайте кнопку с произвольным текстом, сделайте так, чтобы по нажатию текст изменялся на button -->
+    <button id="toggle" onclick="myFunction()">qwerty</button>
+    <!-- 3.  Создайте форму с полем для ввода и двумя кнопками, сделайте так, чтобы по нажатию на кнопку disable, -->
+    <!-- поле становилось неактивным, в случае с enable - наоборот -->
+    <br>
+    <br>
+    <form onsubmit="zapret()">
+
+        <textarea cols="30" rows="5"></textarea>
+
+        <br />
+        <input id="ds" type="submit" />
+        <input type="submit" onclick="this.disabled=true;">
+
+    </form>
+    
+    <br>
+    <br>
+    <div id="x" onmousemove="func()" style="width:250px; height:250px; background: yellow;"></div>
+
+    <script>
+        // 1. Сделайте так, чтобы по нажатию на кнопку выводился alert
+        // 2. Создайте кнопку с произвольным текстом, сделайте так, чтобы по нажатию текст изменялся на button
+        function myFunction() {
+            var change = document.getElementById("toggle");
+            if (change.innerHTML == "qwerty") {
+                change.innerHTML = "button";
+            }
+            else {
+                change.innerHTML = "qwerty";
+            }
+        }
+        //3.  Создайте форму с полем для ввода и двумя кнопками, сделайте так, чтобы по нажатию на кнопку disable,
+        //поле становилось неактивным, в случае с enable - наоборот
+        // function zapret()
+
+        // {
+
+        //    var btn = document.getElementById('ds').disabled = true;
+        // }
+
+        // 4. Нужно создать документ с полем ввода, объектом произвольной формы и цвета. Сделайте так, чтобы в поле ввода
+        // можно было вводить только числовые значения, а объект можно было двигать и узнавать его координаты на странице
+
+        //1.1 Выведите координаты мыши относительно блока в момент движения курсора мыши внутри блока. 
+        //Координаты выводить под блоком.
+        x.onmousemove = function (event) {
+            var s = event.clientX + ':' + event.clientY;
+            document.getElementById("x").value = s;
+            var a = document.getElementById("x").value;
+            alert(a);
+        }
+// 1.2 Создайте блок div, в качестве изображения фона установите ему изображение закрытой папки. Добавьте событие, которое выполняется при двойном клике на блоке и заменяет фон блока на изображение открытой папки
+// 1.3 Добавьте в документ 300-400 блоков div квадратной формы с размерами сторон 30px, и цветом фона.
+// Добавление элементов выполните с помощью цикла. Добавьте событие при наведении мыши, которое будет 
+//скруглять данные блоки с помощью border-radius до круга. Для замедления эффекта скругления
+// в CSS можно добавить transition.
+
+    </script>
+</body>
+
+</html>
