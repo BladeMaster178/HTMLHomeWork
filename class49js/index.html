@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td select,
+        td input {
+            width: 150px;
+        }
+
+        #diagram td {
+            vertical-align: bottom;
+            text-align: center;
+            padding: 10px;
+        }
+
+        #diagram div {
+            margin: auto;
+        }
+
+        /* body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+} */
+
+        /* * {
+    box-sizing: border-box;
+} */
+
+
+        .container {
+            padding: 16px;
+            background-color: white;
+        }
+
+        input[type=text],
+        input[type=password] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            display: inline-block;
+            border: none;
+            background: #f1f1f1;
+        }
+
+        input[type=text]:focus,
+        input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+        hr {
+            border: 1px solid #f1f1f1;
+            margin-bottom: 25px;
+        }
+
+        .registerbtn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 16px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
+        }
+
+        .registerbtn:hover {
+            opacity: 1;
+        }
+
+        /* Add a blue text color to links */
+        a {
+            color: dodgerblue;
+        }
+
+        /* Set a grey background color and center the text of the "sign in" section */
+        .signin {
+            background-color: #f1f1f1;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <select id="main" name="main" class="main_field" aria-required="true">
+        <option value="one">
+            Первая опция
+        </option>
+        <option value="two">
+            Вторая опция
+        </option>
+        <option value="three" selected="selected">
+            Третья опция
+        </option>
+    </select>
+    <hr>
+    <div id="hidden_div1" style="display:none;">Для первого селекта</div>
+    <div id="hidden_div2" style="display:none;">Для второго селекта</div>
+    <div id="hidden_div3" style="display:none;">Для третьего селекта, опция выбрана изначально. Надо что бы этот блок
+        отображался сразу.</div>
+    <br>
+    <br>
+    <br>
+    Депозитный калькулятор.
+
+    <form name="calculator">
+        <table>
+            <tr>
+                <td>Первоначальный депозит</td>
+                <td>
+                    <input name="money" type="number" value="10000" required>
+                </td>
+            </tr>
+            <tr>
+                <td>Срок вклада?</td>
+                <td>
+                    <select name="months">
+                        <option value="3">3 (минимум)</option>
+                        <option value="6">6 (полгода)</option>
+                        <option value="12" selected>12 (год)</option>
+                        <option value="18">18 (1.5 года)</option>
+                        <option value="24">24 (2 года)</option>
+                        <option value="30">30 (2.5 года)</option>
+                        <option value="36">36 (3 года)</option>
+                        <option value="60">60 (5 лет)</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Годовая процентная ставка?</td>
+                <td>
+                    <input name="interest" type="number" value="5" required>
+                </td>
+            </tr>
+        </table>
+
+
+    </form>
+
+
+    <table id="diagram">
+        <tr>
+            <th>Было:</th>
+            <th>Станет:</th>
+        </tr>
+        <tr>
+            <th id="money-before"></th>
+            <th id="money-after"></th>
+        </tr>
+        <td>
+            <div style="background: red;width:40px;height:100px"></div>
+        </td>
+        <td>
+            <div style="background: green;width:40px;height:0" id="height-after"></div>
+        </td>
+    </table>
+
+    <form action="/action_page.php">
+        <div class="container">
+            <h1>Register</h1>
+            <p>Please fill in this form to create an account.</p>
+            <hr>
+
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+
+            <label for="psw-repeat"><b>Repeat Password</b></label>
+            <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+            <hr>
+            <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+            <button type="submit" class="registerbtn">Register</button>
+        </div>
+
+        <div class="container signin">
+            <p>Already have an account? <a href="#">Sign in</a>.</p>
+        </div>
+    </form>
+
+
+    <script>
+        // 1.1 Создайте селект с несколькими опциями, добавьте одну опцию используя Javascript, сделайте так,
+        // чтобы по выбору опции выводилось сообщение 
+        // с данными этой опции
+        document.getElementById('main').addEventListener('change', function () {
+            var style = this.value == "one" ? 'block' : 'none';
+            document.getElementById('hidden_div1').style.display = style;
+
+            var style = this.value == "two" ? 'block' : 'none';
+            document.getElementById('hidden_div2').style.display = style;
+
+            var style = this.value == "three" ? 'block' : 'none';
+            document.getElementById('hidden_div3').style.display = style;
+        });
+        // 1.2 Создайте форму вычисления процентов по вкладу:
+        let form = document.forms.calculator;
+
+        form.money.oninput = calculate;
+        form.months.onchange = calculate;
+        form.interest.oninput = calculate;
+
+        function calculate() {
+            let initial = +form.money.value;
+            if (!initial) return;
+
+            let interest = form.interest.value * 0.01;
+
+            if (!interest) return;
+
+            let years = form.months.value / 12;
+            if (!years) return;
+
+            let result = Math.round(initial * (1 + interest * years));
+
+            let height = result / form.money.value * 100 + 'px';
+            document.getElementById('height-after').style.height = height;
+            document.getElementById('money-before').innerHTML = form.money.value;
+            document.getElementById('money-after').innerHTML = result;
+        }
+
+        calculate();
+        // 1.Создайте регулярное выражение для поиска трёх точек.
+        // var re = /\w+\s/g;
+        // var str = "fee fi fo fum";
+        // var myArray = str.match(re);
+        // console.log(myArray);
+        let regexp = /\.{3}/g;
+        console.log(("Привет!... Как дела?.....".match(regexp))); // ..., .....
+        // 2.Создайте regexp, который ищет все положительные числа, в том числе десятичные.
+        var re = new RegExp("[^-]\\d+", "g");
+        var str = "-4fee 5fi 10fo -7fum";
+        var myArray = str.match(re);
+        console.log(myArray);
+        // var str1 = '1005 попугаев съели 5001 бананов!';
+        // console.log((str1.match(/\d+/ig))); 
+        // 3.Создайте регулярку, которая ищет цвета в формате #eee, #eeeddd
+        let reg = /#[a-f0-9]{6}/gi;
+        let str1 = "color:#121212; background-color:#AA00ef bad-colors:f#fddee #fd2"
+        console.log((str1.match(reg)));
+        // 4.Предложите строку, которая подойдет под выражение ^$
+        var str2 = "";
+        console.log((str2.match(/^\$/ig)));
+        //5. Создайте HTML-форму регистрации с email и паролем. По клику провести валидацию пароля и email,
+        // где пароль должен содержать хотя бы одну цифру, один спецсимвол и одну букву, а так же быть 
+        //длиннее 6 знаков. При прохождении валидации выводить приветственное сообщение, в противном случае - ошибку.
+
+        //## Формы.
+
+        // Все задания выполнять в одном JS-файле. Задания разделять комментариями, в которых указывать номера задач.
+
+        // 1. Дана форма, напишите проверку: на правильность заполнения двух текстовых полей: имя (id="name") и минут (id="minutes"). Используйте проверку на оставление поля пустым ("") и правильного формата. заполнения числового поля (isNaN).
+        //   ```HTML
+        //   <form>Имя: <input type="text" id="name"><br>Кол-во пончиков: <input type="text" id="donuts"><br>Минут: <input type="text" id="minutes"><br>Подитог: <input type="text" id="poditog"><br>Налог: <input type="text" id="tax"><br>Итог:<input type="text" id="itog"><br><input type="submit" value="заказать" onclick="placeOrder();"></form>
+        //   ```
+        // 2. Создать страницу с текстовым полем и двумя кнопками. При нажатии одной из них происходит передача данных содержимого текстового поля по электронной почте (action="mailto:address@domen.domen"), при нажатии другой – происходит очистка текстового поля.
+        // 3. Напишите универсальную функцию для прохождения по полям формы с возможностью проверки введенных данных, для текстовых полей - на текст, для имейла - на имейл и тд.
+        // 4. Поверьте написанную ранее функция на обработку формы регистрации, если поле не проходит валидацию - подсветите его, если все поля валидные - выведите приветственное сообщение.
+        // 5. Написать скрипт, которые заменяет слово «функция» в тексте на «<mark>функция</mark>», используя регулярные выражения.
+        // 6. С помощью test определите, что переданная строка является корректным временем вида '9.59 am', '12.30 pm'.
+        console.log((/^([01]\d|2[0-3]):[0-5]\d\s[ap]m$/.test('24:00')));
+        console.log((/^([01]\d|2[0-3]):[0-5]\d\s[ap]m$/.test('09:59 am')));
+        console.log((/^([01]\d|2[0-3]):[0-5]\d\s[ap]m$/.test('12:30 pm')));
+        // 7. Удалите одной регуляркой все повторяющиеся слова из строки, например для 'dsf xxx xxx sd' должно вернуть 'dsf xxx sd'.
+        var res = "dsf xxx xxx sd".replace(/\b(\w+)\s+\1/g, "$1"); 
+        console.log(res);
+    </script>
+</body>
+
+</html>
